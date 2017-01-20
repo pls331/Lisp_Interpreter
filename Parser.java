@@ -31,14 +31,21 @@ public class Parser {
 	
 	public static boolean isValidToken(String token){
 		if (token.equals("")) return true;
+		if (isAtom(token) || token.equals(OPEN_PARENTHESES) || token.equals(CLOSING_PARENTHESES))
+			return true;
+		else 
+			return false;
+	}
+
+	public static boolean isAtom(String token){
+		if (token.equals("")) return true;
 		for (char c: token.toCharArray())
 			// only Number and Uppercase letter is allowed
-			if ( !( (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '(' || c == ')') )  
+			if ( !( (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ) )  
 				return false;
 		// valid
 		return true;
 	}
-	
 
 	public String getCurrentToken(){
 		String curToken = scn.getCurrentToken();
@@ -59,10 +66,6 @@ public class Parser {
 		else return false;
 	}
 	
-	public boolean isAtom(String token){
-		return true;
-	}
-	
 	/*
 	 * Parse <Start>
 	 */
@@ -70,12 +73,23 @@ public class Parser {
 	public void parseStart(boolean isPrint){
 		if (getCurrentToken().equals(EOF)) 
 			return;
+		
+		StringBuilder builder = new StringBuilder();
 		TreeNode root = null;
+		
 		do{
 			root = parseExpression(); // parse Top level expression
-			if (isPrint) prettyPrint(root); 
+			if (isPrint) builder.append(prettyPrint(root)); 
 			this.rootList.add(root);
 		}while(!scn.getCurrentToken().equals(EOF));
+		
+		if (! this.scn.checker.isWholeStreamValid()){
+			System.out.println();
+			System.out.printf("Error: Invalid Parenthesis. @[parseStart] INFO: %s\n", this.scn.checker.printStack());
+			System.exit(-1);
+		}
+		
+		System.out.print(builder.toString());
 	}
 	
 	public TreeNode parseExpression(){
@@ -101,33 +115,34 @@ public class Parser {
 		}
 		// Other -> Error
 		else{
-			System.out.println("Error during parsing Expression.");
+			System.out.println("Error:  Not Atom, Not Open Parenthesis@[parseExpression].");
 			System.exit(-1);
 		}
 		return node;
 	}
 	
-	public void prettyPrint(TreeNode node){
+	public String prettyPrint(TreeNode node){
 		StringBuilder builder = new StringBuilder();
-		prettyPrintHelper(node);
-		System.out.print("\n");
+		prettyPrintHelper(node, builder);
+		builder.append("\n");
+		return builder.toString();
 	}
 	
-	private void prettyPrintHelper(TreeNode node){
+	private void prettyPrintHelper(TreeNode node, StringBuilder builder){
 		// empty tree
 		if (node == null) return;
 		
 		// leaf node
 		if (node.left == null && node.right == null) {
-			System.out.print(node.getLexicalVal());
+			builder.append(node.getLexicalVal());
 			return;
 		}
 		// print inner node
-		System.out.print("(");
-		prettyPrintHelper(node.left);
-		System.out.print(".");
-		prettyPrintHelper(node.right);
-		System.out.print(")");		
+		builder.append("(");
+		prettyPrintHelper(node.left, builder);
+		builder.append(".");
+		prettyPrintHelper(node.right, builder);
+		builder.append(")");		
 	}
 	
 	/**

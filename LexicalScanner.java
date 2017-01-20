@@ -22,6 +22,7 @@ public class LexicalScanner {
 	/**
 	 * @param args
 	 */
+	
 	// STDIN reader
 	private Reader in;
 	// Parentheses Counter
@@ -50,9 +51,19 @@ public class LexicalScanner {
 	}
 	
 	public void init(){
-		
+		this.curToken = this.getNextToken();
 	}
 	
+	public String getCurrentToken(){
+		return this.curToken;
+	}
+	
+	public void moveToNextToken(){
+		if (! this.curToken.equals("EOF")) this.curToken = this.getNextToken();
+		else{
+			System.out.println("Reach EOF.");
+		}
+	}
 	
 	protected String getNextToken(){
 		/**
@@ -88,7 +99,7 @@ public class LexicalScanner {
 			}
 			// other character
 			else { 
-				System.out.printf("Illegal Character: '%c'\n", c);
+				System.out.printf("ERROR: Illegal Character: '%c'\n", c);
 				return null;
 			}
 			
@@ -96,7 +107,6 @@ public class LexicalScanner {
 			try {
 				this.charInt = this.in.read();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			// if token have been found, break and output it
@@ -110,7 +120,7 @@ public class LexicalScanner {
 		// check parenthesis validity of current token
 		if (token.equals("(") || token.equals(")")){
 			if (! this.checker.isParenthesesValid(token)) {
-				System.out.println("Error, Parenthesis Does not match!");
+				System.out.println("Error: Parenthesis Does not match! @ [getNextToken]");
 				System.exit(-1);
 			}
 		}
@@ -151,13 +161,13 @@ public class LexicalScanner {
 	public String getScannerOutput(){
 		StringBuilder builder = new StringBuilder();
 		builder.append(String.format("LITERAL ATOMS: %d%s\n", this.literalAtomSeq.size(), LexicalScanner.getAtomsString(this.literalAtomSeq)));
-		builder.append(String.format( "NUMERIC ATOMS: %d, %d\n" , this.numericAtomSeq.size(), this.numeric_sum ));
+		builder.append(String.format("NUMERIC ATOMS: %d, %d\n" , this.numericAtomSeq.size(), this.numeric_sum ));
 		builder.append(String.format("OPEN PARENTHESES: %d\n", this.open_p_cnt));
 		builder.append(String.format("CLOSING PARENTHESES: %d\n", this.closing_p_cnt));
 		return builder.toString();
 	}
 	
-	public void parseFromSTDIN(){
+	public void parseStdinForProj1(){
 		/**
 		 * Parse and get all tokens from the input stream. 
 		 * Get Prepared for Proj#1 output.
@@ -168,7 +178,7 @@ public class LexicalScanner {
 		}
 		// check parentheses of whole stream.
 		if (! this.checker.isWholeStreamValid()) {
-			System.out.println("Parentheses in the whole stream is not valid!");
+			System.out.println("ERROR: Parentheses in the whole stream is not valid!");
 			System.exit(-1);
 		}
 	}
@@ -232,6 +242,22 @@ public class LexicalScanner {
 		builder.append(scn.checker.isParenthesesValid(")"));
 		System.out.println(builder.toString() + scn.checker.isWholeStreamValid());
 		
+		// Test init()
+		is = new FileInputStream(new File("ScannerInput.txt"));
+		System.setIn(is);
+		scn = new LexicalScanner();
+		System.out.println(scn.curToken);
+		scn.init();
+		System.out.printf("( == %s\n", scn.curToken);
+		// getCurrent + moveToNext()
+		System.out.printf("( == %s\n", scn.getCurrentToken());
+		scn.moveToNextToken();
+		System.out.printf("DEFUN == %s\n", scn.getCurrentToken());
+		while(! scn.getCurrentToken().equals("EOF")){
+			System.out.printf(", %s", scn.getCurrentToken());
+			scn.moveToNextToken();
+		}
+		System.out.println("\nInit(), getCurrent(), moveToNext() tested result is above this line ______");
 		System.exit(0);
 	}
 
@@ -242,6 +268,10 @@ public class LexicalScanner {
 		ArrayList<String> stack = new ArrayList<>();
 		private int open_cnt = 0;
 		private boolean isValid = true;
+		
+		public String printStack(){
+			return stack.toString() + open_cnt + isValid;
+		}
 		
 		public boolean isParenthesesValid(String p){
 			if (p.equals("(")) open_cnt ++ ;
