@@ -99,8 +99,8 @@ public class LexicalScanner {
 			}
 			// other character
 			else { 
-				System.out.printf("ERROR: Illegal Character: '%c'\n", c);
-				return null;
+				System.out.printf("ERROR: Illegal Character: '%c'. @[getNextToken()]\n", c);
+				System.exit(-1);
 			}
 			
 			// Read next char
@@ -265,12 +265,12 @@ public class LexicalScanner {
 		/**
 		 * Description: a class for checking whether the parenthesis is valid or not.
 		 */
-		ArrayList<String> stack = new ArrayList<>();
+//		ArrayList<String> stack = new ArrayList<>();
 		private int open_cnt = 0;
 		private boolean isValid = true;
 		
-		public String printStack(){
-			return stack.toString() + open_cnt + isValid;
+		public String printCheckerStatus(){
+			return "# of Open Parenthesis: " + open_cnt + " ,isValid:" + isValid;
 		}
 		
 		public boolean isParenthesesValid(String p){

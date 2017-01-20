@@ -29,7 +29,7 @@ public class Parser {
 		this.rootList = new ArrayList<>(); // root of parse tree
 	}
 	
-	public static boolean isValidToken(String token){
+	private static boolean isValidToken(String token){
 		if (token.equals("")) return true;
 		if (isAtom(token) || token.equals(OPEN_PARENTHESES) || token.equals(CLOSING_PARENTHESES))
 			return true;
@@ -37,7 +37,7 @@ public class Parser {
 			return false;
 	}
 
-	public static boolean isAtom(String token){
+	private static boolean isAtom(String token){
 		if (token.equals("")) return true;
 		for (char c: token.toCharArray())
 			// only Number and Uppercase letter is allowed
@@ -47,23 +47,12 @@ public class Parser {
 		return true;
 	}
 
-	public String getCurrentToken(){
-		String curToken = scn.getCurrentToken();
-		if (isValidToken(curToken))  return curToken;  
-		else{ // invalid token -> exit
-			System.out.printf("Error, invalid token. Token: %s\n", scn.getCurrentToken());
-			System.exit(-2);
-			return null;
-		}
+	private String getCurrentToken(){
+		return scn.getCurrentToken();
 	}
 	
-	public void moveToNextToken(){
+	private void moveToNextToken(){
 		scn.moveToNextToken();
-	}
-	
-	public boolean isAccept(String token){
-		if (token.equals(this.getCurrentToken())) return true;
-		else return false;
 	}
 	
 	/*
@@ -85,14 +74,13 @@ public class Parser {
 		
 		if (! this.scn.checker.isWholeStreamValid()){
 			System.out.println();
-			System.out.printf("Error: Invalid Parenthesis. @[parseStart] INFO: %s\n", this.scn.checker.printStack());
+			System.out.printf("Error: Invalid Parenthesis. @[parseStart] INFO: %s\n", this.scn.checker.printCheckerStatus());
 			System.exit(-1);
 		}
-		
 		System.out.print(builder.toString());
 	}
 	
-	public TreeNode parseExpression(){
+	private TreeNode parseExpression(){
 		TreeNode node = new TreeNode(); // node for current terminal/non-terminal
 		String curToken = getCurrentToken();
 		
@@ -101,6 +89,12 @@ public class Parser {
 			moveToNextToken(); // consume OPEN_PARENTHESES
 			TreeNode pointer = node;
 			while (! getCurrentToken().equals(CLOSING_PARENTHESES)) {
+				if (getCurrentToken().equals(EOF)) {
+					System.out.printf("Error: Invalid Parenthesis. @[parseExpression] INFO: %s\n", 
+							this.scn.checker.printCheckerStatus());
+					System.exit(-1);
+				};
+				
 				pointer.left = parseExpression();
 //				if (getCurrentToken().equals(CLOSING_PARENTHESES)) break; // only 1 expression in (<List>)
 				pointer.right = new TreeNode();
