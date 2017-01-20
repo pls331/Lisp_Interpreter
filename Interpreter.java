@@ -63,9 +63,10 @@ public class Interpreter {
 //		}
 		Interpreter interpreter = new Interpreter();
 		
-//		interpreter.parseStdinForProj1(); // Parse the STDIN stream for project 1
+		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( true ); // Project 2 output
-		System.out.println("");
+
+		System.out.println("\n#### Project1: Input Stream Statistics ####");
 		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
 //		System.out.println("__Interpreter Finished Excecution.__");	
 	}
