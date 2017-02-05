@@ -1,8 +1,3 @@
-/**
- * 
- */
-
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,11 +13,6 @@ import java.util.ArrayList;
  * 
  */
 public class LexicalScanner {
-
-	/**
-	 * @param args
-	 */
-	
 	// STDIN reader
 	private Reader in;
 	// Parentheses Counter
@@ -30,10 +20,10 @@ public class LexicalScanner {
 	private int closing_p_cnt;
 	// Atom List : Numeric and Literal
 	private int numeric_sum;
-	ArrayList<String> literalAtomSeq;
-	ArrayList<String> numericAtomSeq; 
+	private ArrayList<String> literalAtomSeq;
+	private ArrayList<String> numericAtomSeq;
 	// Parentheses Checker
-	ParenthesisChecker checker;
+	public ParenthesisChecker checker;
 	private int charInt;
 	// current token
 	private String curToken;
@@ -45,8 +35,8 @@ public class LexicalScanner {
 		this.closing_p_cnt = 0;
 		this.charInt = this.in.read();
 		this.checker = new ParenthesisChecker();
-		this.literalAtomSeq = new ArrayList<String>(); // remember the ASCII sequences
-		this.numericAtomSeq = new ArrayList<String>(); // remember the ASCII sequences
+		this.literalAtomSeq = new ArrayList<>(); // remember the ASCII sequences
+		this.numericAtomSeq = new ArrayList<>(); // remember the ASCII sequences
 		this.curToken = null;
 	}
 	
@@ -75,7 +65,8 @@ public class LexicalScanner {
 		StringBuilder builder = new StringBuilder();
 		char c;
 		boolean isTokenFind = false;
-		
+
+
 		while (this.charInt != -1){
 //			System.out.printf("scn.charInt: {%c}\n", (char)this.charInt);
 			c = (char) this.charInt;
