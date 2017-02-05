@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="" />
+    <list id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="Learn about commit." />
+    <list default="true" id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="idea_config">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,15 +37,15 @@
       <file leaf-file-name="LexicalScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LexicalScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="159" column="4" lean-forward="true" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="4" />
+            <state relative-caret-position="554">
+              <caret line="156" column="51" lean-forward="false" selection-start-line="156" selection-start-column="51" selection-end-line="156" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1201#1202#0" expanded="true" />
                 <element signature="e#1243#1244#0" expanded="true" />
                 <element signature="e#1279#1280#0" expanded="true" />
                 <element signature="e#1306#1307#0" expanded="true" />
-                <marker date="1486314597752" expanded="false" signature="8142:8146" ph=" }" />
+                <marker date="1486316009203" expanded="false" signature="8142:8146" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -471,6 +474,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="" />
+      <changelist id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="idea_config" />
       <created>1486254253753</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -497,7 +501,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="2" width="2488" height="1749" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -509,7 +513,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293954" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293954" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293954" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32407406" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19596942" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -555,6 +559,7 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="Learn about commit." />
     <option name="LAST_COMMIT_MESSAGE" value="Learn about commit." />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -583,7 +588,7 @@
             <element signature="e#1243#1244#0" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
             <element signature="e#1306#1307#0" expanded="true" />
-            <marker date="1486314597752" expanded="false" signature="8142:8146" ph=" }" />
+            <marker date="1486316009203" expanded="false" signature="8142:8146" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -630,7 +635,7 @@
             <element signature="e#1243#1244#0" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
             <element signature="e#1306#1307#0" expanded="true" />
-            <marker date="1486314597752" expanded="false" signature="8142:8146" ph=" }" />
+            <marker date="1486316009203" expanded="false" signature="8142:8146" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -653,7 +658,7 @@
             <element signature="e#1243#1244#0" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
             <element signature="e#1306#1307#0" expanded="true" />
-            <marker date="1486314597752" expanded="false" signature="8142:8146" ph=" }" />
+            <marker date="1486316009203" expanded="false" signature="8142:8146" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -690,17 +695,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LexicalScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="159" column="4" lean-forward="true" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="4" />
+        <state relative-caret-position="554">
+          <caret line="156" column="51" lean-forward="false" selection-start-line="156" selection-start-column="51" selection-end-line="156" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1201#1202#0" expanded="true" />
             <element signature="e#1243#1244#0" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
             <element signature="e#1306#1307#0" expanded="true" />
-            <marker date="1486314597752" expanded="false" signature="8142:8146" ph=" }" />
+            <marker date="1486316009203" expanded="false" signature="8142:8146" ph=" }" />
           </folding>
         </state>
       </provider>
