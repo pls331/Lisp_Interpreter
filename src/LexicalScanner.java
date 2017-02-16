@@ -23,7 +23,9 @@ public class LexicalScanner {
 	private int charInt;
 	// current token
 	private Token curToken;
-	
+
+	public LexicalScanner() throws IOException {this(System.in);}
+
 	public LexicalScanner(InputStream in) throws IOException {
 		this.in = new BufferedReader(new InputStreamReader(in)); // STDIN reader
 		this.numeric_sum = 0;
@@ -53,7 +55,7 @@ public class LexicalScanner {
 	}
 	
 	public void moveToNextToken(){
-		if (! (curToken == ) ) this.curToken = this.getNextToken();
+		if (curToken.getType() != TokenType.EOF ) this.curToken = this.getNextToken();
 		else{
 			System.out.println("Reach EOF.");
 		}
@@ -109,7 +111,8 @@ public class LexicalScanner {
 		}
 
 		// get token from string builder
-		if (this.charInt == -1 && builder.length() == 0) return "EOF"; // no token available
+		if (this.charInt == -1 && builder.length() == 0)
+			return new Token("EOF", TokenType.EOF); // no token available
 		// get token
 		String token = builder.toString();
 		// If parenthesis, check parenthesis validity of current token
@@ -142,7 +145,7 @@ public class LexicalScanner {
 		assert res != null;
 		return res;
 	}
-	
+
 	private boolean isNumericAtom(String token){
 		// check is Numeric Atom
 		if (token.length() == 0) return false;
@@ -153,7 +156,7 @@ public class LexicalScanner {
 		}
 		return true;
 	}
-	
+
 	public String getScannerOutput(){
 		StringBuilder builder = new StringBuilder();
 		builder.append(String.format("LITERAL ATOMS: %d%s\n", this.literalAtomSeq.size(), LexicalScanner.getAtomsString(this.literalAtomSeq)));
@@ -168,8 +171,8 @@ public class LexicalScanner {
 		 * Parse and get all tokens from the input stream. 
 		 * Get Prepared for Proj#1 output.
 		 */
-		String token = this.getNextToken();
-		while (!token.equals("EOF")){
+		Token token = this.getNextToken();
+		while (token.getType() != TokenType.EOF){
 			token = this.getNextToken();
 		}
 		// check parentheses of whole stream.
@@ -209,7 +212,7 @@ public class LexicalScanner {
 		}
 		
 	}
-	
+
 }
 
 

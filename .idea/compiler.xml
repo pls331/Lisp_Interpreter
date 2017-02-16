@@ -2,5 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <option name="BUILD_PROCESS_HEAP_SIZE" value="1500" />
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/Interpreter.java" />
+      <file url="file://$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
+      <file url="file://$PROJECT_DIR$/src/functions/Preconditions.java" />
+    </excludeFromCompile>
   </component>
 </project>

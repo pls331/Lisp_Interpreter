@@ -1,4 +1,5 @@
-import functions.BuiltInFunctions;
+import util.Token;
+import util.TokenType;
 import util.TreeNode;
 
 import java.util.ArrayList;
@@ -11,7 +12,8 @@ import java.util.ArrayList;
  * @author lenovo1
  *
  */
-public class Parser implements BuiltInFunctions{
+//public class Parser implements BuiltInFunctions{
+public class Parser {
 
 	public static final String CLOSING_PARENTHESES = ")";
 	public static final String OPEN_PARENTHESES = "(";
@@ -31,22 +33,7 @@ public class Parser implements BuiltInFunctions{
 		this.rootList = new ArrayList<>(); // root of parse tree
 	}
 	
-	private static boolean isValidToken(String token){
-		if (token.equals("")) return true;
-		return isAtom(token) || token.equals(OPEN_PARENTHESES) || token.equals(CLOSING_PARENTHESES);
-	}
-
-	private static boolean isAtom(String token){
-		if (token.equals("")) return true;
-		for (char c: token.toCharArray())
-			// only Number and Uppercase letter is allowed
-			if ( !( (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ) )  
-				return false;
-		// valid
-		return true;
-	}
-
-	private String getCurrentToken(){
+	private Token getCurrentToken(){
 		return scn.getCurrentToken();
 	}
 	
@@ -57,7 +44,6 @@ public class Parser implements BuiltInFunctions{
 	/*
 	 * Parse <Start>
 	 */
-	
 	public void parseStart(boolean isPrint){
 		if (getCurrentToken().equals(EOF)) 
 			return;
@@ -81,29 +67,36 @@ public class Parser implements BuiltInFunctions{
 	
 	private TreeNode parseExpression(){
 		TreeNode node = new TreeNode(); // node for current terminal/non-terminal
-		String curToken = getCurrentToken();
+		Token curToken = getCurrentToken();
 		
 		// <Expr> ::= (<List>)
-		if (curToken.equals(OPEN_PARENTHESES)){
+		if (curToken.getType() == TokenType.OPEN_PARENTHESIS){
 			moveToNextToken(); // consume OPEN_PARENTHESES
-			TreeNode pointer = node;
-			while (! getCurrentToken().equals(CLOSING_PARENTHESES)) {
-				if (getCurrentToken().equals(EOF)) {
+			TreeNode rightMost = node;
+			while (getCurrentToken().getType() != TokenType.CLOSING_PARENTHESIS) {
+				if (getCurrentToken().getType() == TokenType.EOF) {
 					System.out.printf("Error: Invalid Parenthesis. @[parseExpression] INFO: %s\n", 
 							this.scn.checker.printCheckerStatus());
 					System.exit(-1);
 				}
 				
-				pointer.setLeft(parseExpression());
-//				if (getCurrentToken().equals(CLOSING_PARENTHESES)) break; // only 1 expression in (<List>)
-				pointer.setRight(new TreeNode());
-				pointer = pointer.getRight();
+				rightMost.setLeft(parseExpression());
+				if (getCurrentToken().getType() == TokenType.CLOSING_PARENTHESIS){
+					// reach the end of the LISP "list" -> NIL node
+					rightMost.setRight(new TreeNode(new Token("NIL", TokenType.NIL)));
+				}
+				else{
+					// create inner node
+					rightMost.setRight(new TreeNode());
+				}
+				rightMost = rightMost.getRight();
 			}
 			moveToNextToken(); // consume CLOSING_PARENTHESES
 		}
 		// <Expr> ::= Atom
-		else if(isAtom(curToken)){
-			node.setLexicalVal(curToken);
+		else if(curToken.getType() == TokenType.LITERAL_ATOM ||
+					curToken.getType() == TokenType.NUMERIC_ATOM){
+			node.setToken(curToken);
 			moveToNextToken(); // consume atom
 		}
 		// Other -> Error

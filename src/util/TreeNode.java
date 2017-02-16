@@ -5,45 +5,48 @@ package util;
 */
 public class TreeNode {
 
-        private TreeNode left;
-        private TreeNode right;
-        private String lexval;
-        private String type;
-        private Token token;
+    private TreeNode left;
+    private TreeNode right;
+    private String lexval;
+    private Token token;
 
-        public TreeNode(){
-            this("NIL");
-//            this.lexval = "NIL";
-//            this.setRight(null);
-//            this.setLeft(null);
+    /*
+    Create inner node. (assign null as token field.)
+     */
+    public TreeNode(){
+        this(null);
+    }
+
+    public TreeNode(Token token){
+        this.token = token;
+        if (token == null){
+            this.lexval = "*";
+        }else{
+            this.lexval = token.getLexval();
         }
+        this.setLeft(null);
+        this.setRight(null);
+    }
 
-        public TreeNode(String lexval){
-            this.lexval = lexval;
-            this.setLeft(null);
-            this.setRight(null);
-        }
 
-        private void setType(String type){
-
-        }
-
-        public String getLexicalVal(){
+    public String getLexicalVal(){
             return this.lexval;
         }
 
-        public void setLexicalVal(String lexval){
-            if (! (lexval instanceof String)) {
-                System.out.println("Error: Failed to set Lexical Value of binary tree node.");
-                System.exit(-1);
-            }
-            this.lexval = lexval;
-        }
-
-        @Override
-        public String toString(){
-            return "<" + (this.isLeaf()? this.getLexicalVal():"Inner Node") + ">";
-        }
+    @Override
+    public String toString(){
+        StringBuilder builder = new StringBuilder();
+        builder.append("[");
+        if(getLeft() != null)  builder.append(getLeft().getLexicalVal());
+        else builder.append("null");
+        builder.append(" <- ");
+        builder.append(this.getLexicalVal());
+        builder.append(" -> ");
+        if(getRight() != null) builder.append(getRight().getLexicalVal());
+        else builder.append("null");
+        builder.append("]");
+        return builder.toString();
+    }
 
     public boolean isLeaf() {
         return this.getLeft() == null && this.getRight() == null;
@@ -53,7 +56,7 @@ public class TreeNode {
         return left;
     }
 
-        public void setLeft(TreeNode node){
+    public void setLeft(TreeNode node){
             this.left = node;
         }
 
@@ -61,7 +64,17 @@ public class TreeNode {
         return right;
     }
 
-        public void setRight(TreeNode node){
+    public void setRight(TreeNode node){
             this.right = node;
         }
+
+
+    public Token getToken() {
+        return token;
+    }
+
+    public void setToken(Token token) {
+        this.token = token;
+    }
+
 }
