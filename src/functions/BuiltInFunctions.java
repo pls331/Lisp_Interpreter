@@ -36,21 +36,28 @@ public interface BuiltInFunctions {
 
     default TreeNode Int(TreeNode node) {
         Preconditions.checkNotNull(node);
-        return new TreeNode(TokenUtil.isNumericAtom(node.getLexicalVal()) ? "T" : "NIL");
+        if( node.isLeaf() && TokenUtil.isNumericAtom(node.getLexicalVal()) ){
+            return new TreeNode("T");
+        }else{
+            return new TreeNode("NIL");
+        }
     }
 
     default TreeNode Null(TreeNode node){
         Preconditions.checkNotNull(node); // undefined
-        Preconditions.checkUndefinedBehavior(node.isLeaf(), "in Null() @" + node.toString());
-        return new TreeNode(TokenUtil.isNIL(node.getLexicalVal()) ? "T" : "NIL");
+        if( node.isLeaf() && TokenUtil.isNIL(node.getLexicalVal()) ){
+            return new TreeNode("T");
+        }else{
+            return new TreeNode("NIL");
+        }
     }
 
     default TreeNode Eq(TreeNode node1, TreeNode node2){
         Preconditions.checkNotNull(node1);
         Preconditions.checkNotNull(node2);
-        Preconditions.checkUndefinedBehavior(node1.isLeaf(), "in Eq() @" + node1.toString());
-        Preconditions.checkUndefinedBehavior(node2.isLeaf(), "in Eq() @" + node2.toString());
-
+        // Have exactly 1 treenode
+        Preconditions.checkUndefinedBehavior(!node1.isLeaf(), "in Eq() @" + node1.toString());
+        Preconditions.checkUndefinedBehavior(!node2.isLeaf(), "in Eq() @" + node2.toString());
 
         return null;
     }

@@ -1,3 +1,6 @@
+import util.Token;
+import util.TokenType;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -19,7 +22,7 @@ public class LexicalScanner {
 	private ArrayList<String> numericAtomSeq;
 	private int charInt;
 	// current token
-	private String curToken;
+	private Token curToken;
 	
 	public LexicalScanner(InputStream in) throws IOException {
 		this.in = new BufferedReader(new InputStreamReader(in)); // STDIN reader
@@ -45,18 +48,18 @@ public class LexicalScanner {
 		this.curToken = this.getNextToken();
 	}
 	
-	String getCurrentToken(){
+	Token getCurrentToken(){
 		return this.curToken;
 	}
 	
 	public void moveToNextToken(){
-		if (! this.curToken.equals("EOF")) this.curToken = this.getNextToken();
+		if (! (curToken == ) ) this.curToken = this.getNextToken();
 		else{
 			System.out.println("Reach EOF.");
 		}
 	}
 	
-	protected String getNextToken(){
+	protected Token getNextToken(){
 		/**
 		 * 	keep counters for how many literal atoms, numeric atoms,
 		 * 	open parentheses, and closing parentheses were found
@@ -109,27 +112,35 @@ public class LexicalScanner {
 		if (this.charInt == -1 && builder.length() == 0) return "EOF"; // no token available
 		// get token
 		String token = builder.toString();
-		// check parenthesis validity of current token
+		// If parenthesis, check parenthesis validity of current token
 		if (token.equals("(") || token.equals(")")){
 			if (! this.checker.isParenthesesValid(token)) {
 				System.out.println("Error: Parenthesis Does not match! @ [getNextToken]");
 				System.exit(-1);
 			}
 		}
-
+		Token res = null;
 		// count the token
 		if ( token.equals("(") ) {
+			res = new Token(token, TokenType.OPEN_PARENTHESIS);
 			this.open_p_cnt ++;
-
 		}
-		else if ( token.equals( ")" ) ) this.closing_p_cnt++;
+		else if ( token.equals( ")" ) ){
+			res = new Token(token, TokenType.CLOSING_PARENTHESIS);
+			this.closing_p_cnt++;
+		}
 		else if (this.isNumericAtom(token)) {
+			res = new Token(token, TokenType.NUMERIC_ATOM);
 			this.numericAtomSeq.add(token);
 			this.numeric_sum += Integer.parseInt(token);
 		}
-		else this.literalAtomSeq.add(token);
+		else{
+			res = new Token(token, TokenType.LITERAL_ATOM);
+			this.literalAtomSeq.add(token);
+		}
 		// return token
-		return token;
+		assert res != null;
+		return res;
 	}
 	
 	private boolean isNumericAtom(String token){

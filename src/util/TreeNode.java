@@ -9,6 +9,7 @@ public class TreeNode {
         private TreeNode right;
         private String lexval;
         private String type;
+        private Token token;
 
         public TreeNode(){
             this("NIL");
