@@ -24,5 +24,13 @@ class TokenTest extends GroovyTestCase {
         Token token2 = new Token("asdf", TokenType.LITERAL_ATOM)
         assertTrue(token2.getType() == TokenType.LITERAL_ATOM)
         assertFalse(token2.getType() == TokenType.EOF)
+        Token token3 = new Token("123", TokenType.NUMERIC_ATOM)
+        Token token4 = new Token("123", TokenType.NUMERIC_ATOM)
+        Token token5 = new Token("12", TokenType.NUMERIC_ATOM)
+        assertTrue(token3.equals(token4))
+        println  token3.equals(token5)
+        assertFalse(token3.equals(token5))
+        assertFalse(token4.equals(token2))
+//        assertFalse(token)
     }
 }

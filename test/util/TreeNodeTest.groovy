@@ -20,7 +20,7 @@ class TreeNodeTest extends GroovyTestCase {
         TreeNode node = new TreeNode()
         TreeNode node2 = new TreeNode(new Token("adfa", TokenType.LITERAL_ATOM))
         TreeNode node3 = new TreeNode(new Token("1234", TokenType.NUMERIC_ATOM))
-        TreeNode node4 = new TreeNode(new Token("NIL", TokenType.NIL))
+        TreeNode node4 = new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM))
         node.setLeft(node2)
         node.setRight(node4)
         node2.setLeft(node3)

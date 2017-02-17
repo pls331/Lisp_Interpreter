@@ -78,7 +78,7 @@ public class Parser {
 				rightMost.setLeft(parseExpression());
 				if (scn.getCurrentToken().getType() == TokenType.CLOSING_PARENTHESIS){
 					// reach the end of the LISP "list" -> NIL node
-					rightMost.setRight(new TreeNode(new Token("NIL", TokenType.NIL)));
+					rightMost.setRight(new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM)));
 				}
 				else{
 					// create inner node
@@ -88,7 +88,7 @@ public class Parser {
 			}
 			moveToNextToken(); // consume CLOSING_PARENTHESES
 			if(rightMost.isLeaf()){
-				rightMost.setToken(new Token("NIL", TokenType.NIL));
+				rightMost.setToken(new Token("NIL", TokenType.LITERAL_ATOM));
 			}
 		}
 		// <Expr> ::= Atom

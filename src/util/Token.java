@@ -27,6 +27,13 @@ public class Token {
         return token.equals("NIL");
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        Token token = (Token) obj;
+        return token.getType() == this.type && token.getLexval().equals(this.lexval);
+    }
+
     public String getLexval() {
         return lexval;
     }

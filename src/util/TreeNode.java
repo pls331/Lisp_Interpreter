@@ -80,4 +80,18 @@ public class TreeNode {
         this.lexval = token.getLexval();
     }
 
+    @Override
+    public boolean equals(Object obj)
+        throws NullPointerException {
+
+        if(obj == null)
+            throw new NullPointerException("null is not a kind of node");
+        TreeNode node2 = (TreeNode) obj;
+        if(this.getLexicalVal().equals(node2.getLexicalVal())){
+            if(this.getToken() == null && node2.getToken() == null)
+                return true;
+            else return this.getToken().equals(node2.getToken());
+        }
+        return false;
+    }
 }

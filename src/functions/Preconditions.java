@@ -9,12 +9,16 @@ public class Preconditions {
 
     public static void checkNotNull(Object node){
         if (node == null){
-            throw new NullPointerException();
+            throw new NullPointerException("Precondition check");
         }
     }
 
     public static void checkUndefinedBehavior(boolean expr, String msg){
-        if(expr){
+        try{
+            if(expr){
+                throw new UndefinedBehaviorException(msg);
+            }
+        }catch (Exception e){
             throw new UndefinedBehaviorException(msg);
         }
     }
