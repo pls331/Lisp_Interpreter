@@ -4,7 +4,6 @@ package util;
 * Binary Tree Node definition - inner class
 */
 public class TreeNode {
-
     private TreeNode left;
     private TreeNode right;
     private String lexval;
@@ -17,6 +16,9 @@ public class TreeNode {
         this(null);
     }
 
+    /*
+    Create node with token object.
+     */
     public TreeNode(Token token){
         this.token = token;
         if (token == null){
@@ -30,8 +32,8 @@ public class TreeNode {
 
 
     public String getLexicalVal(){
-            return this.lexval;
-        }
+        return this.lexval;
+    }
 
     @Override
     public String toString(){
@@ -75,6 +77,7 @@ public class TreeNode {
 
     public void setToken(Token token) {
         this.token = token;
+        this.lexval = token.getLexval();
     }
 
 }
