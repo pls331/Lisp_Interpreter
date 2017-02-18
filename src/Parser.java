@@ -51,7 +51,7 @@ public class Parser implements BuiltInFunctions{
 		
 		do{
 			root = parseExpression(); // parse Top level expression
-			if (isPrint) builder.append(TreeUtil.prettyPrint(root));
+			if (isPrint) builder.append(TreeUtil.printDotNotation(root));
 			this.rootList.add(root);
 		}while(scn.getCurrentToken().getType() != TokenType.EOF);
 

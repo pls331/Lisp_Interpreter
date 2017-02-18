@@ -44,17 +44,16 @@ public class TreeUtil {
         return false;
     }
 
-    public static String prettyPrint(TreeNode node){
+    public static String printDotNotation(TreeNode node){
         StringBuilder builder = new StringBuilder();
-        prettyPrintHelper(node, builder);
+        dotNotationHelper(node, builder);
         builder.append("\n");
         return builder.toString();
     }
 
-    private static void prettyPrintHelper(TreeNode node, StringBuilder builder){
+    private static void dotNotationHelper(TreeNode node, StringBuilder builder){
         // empty tree
         if (node == null) return;
-
         // leaf node
         if (node.getLeft() == null && node.getRight() == null) {
             builder.append(node.getLexicalVal());
@@ -62,9 +61,9 @@ public class TreeUtil {
         }
         // print inner node
         builder.append("(");
-        prettyPrintHelper(node.getLeft(), builder);
+        dotNotationHelper(node.getLeft(), builder);
         builder.append(".");
-        prettyPrintHelper(node.getRight(), builder);
+        dotNotationHelper(node.getRight(), builder);
         builder.append(")");
     }
 
@@ -92,8 +91,10 @@ public class TreeUtil {
             cur = cur.getRight();
             if(cur.getRight() != null) builder.append(" ");
         }
-        builder.append(" . ");
-        builder.append(cur.getLexicalVal());
+        if(! cur.equals(nodeNIL)){
+            builder.append(" . ");
+            builder.append(cur.getLexicalVal());
+        }
         builder.append(")");
     }
 }

@@ -45,17 +45,17 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         n3.setRight(n5)
         n5.setLeft(n6)
         n5.setRight(n7)
-        println TreeUtil.prettyPrint(n1)
+        println TreeUtil.printDotNotation(n1)
         MyClass obj = new MyClass()
         println obj.Eval(n1)
         assertTrue(obj.Eval(n1).toString().equals("[null <- 3 -> null]"))
 //        assertSame("[null <- 3 -> null]", obj.Eval(n1).toString())
         n2.setToken(new Token("MINUS", TokenType.LITERAL_ATOM))
-        println TreeUtil.prettyPrint(n1)
+        println TreeUtil.printDotNotation(n1)
         println obj.Eval(n1)
         assertTrue(obj.Eval(n1).toString().equals("[null <- 1 -> null]"))
         n2.setToken(new Token("TIMES", TokenType.LITERAL_ATOM))
-        println TreeUtil.prettyPrint(n1)
+        println TreeUtil.printDotNotation(n1)
         assertTrue(obj.Eval(n1).equals(n4))  // 2 * 1
 
         n2.setToken(new Token("GREATER", TokenType.LITERAL_ATOM))
@@ -104,7 +104,7 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         n3.setLeft(n4)
         n3.setRight(n5)
 
-        println TreeUtil.prettyPrint(n1)
+        println TreeUtil.printDotNotation(n1)
         MyClass obj = new MyClass()
 
         n2.setToken(new Token("ATOM", TokenType.LITERAL_ATOM))

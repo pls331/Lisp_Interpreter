@@ -12,7 +12,7 @@ class TreeUtilTest extends GroovyTestCase {
         node.setLeft(node2)
         node.setRight(node4)
         node2.setLeft(node3)
-        println TreeUtil.prettyPrint(node)
+        println TreeUtil.printDotNotation(node)
     }
 
 

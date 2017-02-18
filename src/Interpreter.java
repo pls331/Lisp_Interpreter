@@ -83,7 +83,12 @@ public class Interpreter {
             e.printStackTrace();
         }catch (UndefinedBehaviorException udbe){
             System.out.println(String.format("ERROR: %s", udbe.getMessage()));
-        }finally {
+        }catch (NullPointerException npe){
+			System.out.println(String.format("ERROR: %s", npe.getMessage()));
+		}catch(Exception e){
+        	e.printStackTrace();
+		}
+		finally {
             System.exit(-2);
         }
 
