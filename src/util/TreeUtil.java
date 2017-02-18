@@ -71,7 +71,6 @@ public class TreeUtil {
 
     public static String printListNotation(TreeNode root) {
         if(root == null) return "";
-        if(root.isLeaf()) return String.format("(%s)", root.getLexicalVal());
 
         StringBuilder builder = new StringBuilder();
         listNotationHelper(root, builder);
@@ -87,12 +86,14 @@ public class TreeUtil {
 
         TreeNode cur = root, left = null;
         builder.append("(");
-        while(cur != null){
+        while(cur.getRight() != null){
             left = cur.getLeft();
             listNotationHelper(left, builder);
             cur = cur.getRight();
-            if(cur != null) builder.append(" ");
+            if(cur.getRight() != null) builder.append(" ");
         }
+        builder.append(" . ");
+        builder.append(cur.getLexicalVal());
         builder.append(")");
     }
 }
