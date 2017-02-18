@@ -13,14 +13,11 @@ public class Preconditions {
         }
     }
 
-    public static void checkUndefinedBehavior(boolean expr, String msg){
-        try{
-            if(expr){
+    public static void checkUndefinedBehavior(boolean expr, String msg)
+        throws UndefinedBehaviorException{
+        if(expr){
                 throw new UndefinedBehaviorException(msg);
             }
-        }catch (Exception e){
-            throw new UndefinedBehaviorException(msg);
-        }
     }
 
 }

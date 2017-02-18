@@ -80,6 +80,10 @@ public class TreeNode {
         this.lexval = token.getLexval();
     }
 
+    public TokenType getTokenType(){
+        return token.getType();
+    }
+
     @Override
     public boolean equals(Object obj)
         throws NullPointerException {

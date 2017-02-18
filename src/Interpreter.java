@@ -1,8 +1,11 @@
 
+import exception.UndefinedBehaviorException;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 
 
 public class Interpreter {
@@ -26,7 +29,7 @@ public class Interpreter {
 	public static void main(String[] args) throws IOException {
         //region create STDIN from file
 		InputStream is = null;
-		is = new FileInputStream(new File("ParserTest.txt"));
+		is = new FileInputStream(new File("EvaluateTest.txt"));
 		System.setIn(is);
         //endregion
 
@@ -41,9 +44,9 @@ public class Interpreter {
 
 		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( true ); // Project 2 output
-
-		System.out.println("\n#### Project1: Input Stream Statistics ####");
-		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
+        interpreter.eval(true);
+//		System.out.println("\n#### Project1: Input Stream Statistics ####");
+//		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
 //		System.out.println("__Interpreter Finished Excecution.__");
 		System.exit(0);
 	}
@@ -68,7 +71,22 @@ public class Interpreter {
 	}
 
 	public void parse(boolean isPrint){
-		this.parser.parseStart(isPrint);
+        this.parser.parseStart(isPrint);
 	}
+
+	public void eval(boolean isPrint){
+        try {
+            this.parser.eval(isPrint);
+         } catch (ClassNotFoundException | NoSuchMethodException  |
+                    IllegalAccessException  |InvocationTargetException e)
+        {
+            e.printStackTrace();
+        }catch (UndefinedBehaviorException udbe){
+            System.out.println(String.format("ERROR: %s", udbe.getMessage()));
+        }finally {
+            System.exit(-2);
+        }
+
+    }
 	
 }

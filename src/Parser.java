@@ -1,8 +1,11 @@
+import exception.UndefinedBehaviorException;
+import functions.BuiltInFunctions;
 import util.Token;
 import util.TokenType;
 import util.TreeNode;
 import util.TreeUtil;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 /**
@@ -14,9 +17,7 @@ import java.util.ArrayList;
  *
  */
 //public class Parser implements BuiltInFunctions{
-public class Parser {
-
-	public static final String EOF = "EOF";
+public class Parser implements BuiltInFunctions{
 	/**
 	 * Context-free Gramma:
 	 * <Start> ::= <Expr> <Start> | <Expr> eof
@@ -25,21 +26,23 @@ public class Parser {
 	 */
 	private LexicalScanner scn;
 	private ArrayList<TreeNode> rootList;
-	
+	private ArrayList<TreeNode> resultList;
+
 	public Parser(LexicalScanner scn) {
 		// Initialize parser
 		this.scn = scn;
 		this.rootList = new ArrayList<>(); // root of parse tree
+		this.resultList = new ArrayList<>(); // root of parse tree
 	}
 	
 	private void moveToNextToken(){
 		scn.moveToNextToken();
 	}
-	
+
 	/*
 	 * Parse <Start>
 	 */
-	public void parseStart(boolean isPrint){
+	public void  parseStart(boolean isPrint) {
 		if (scn.getCurrentToken().getType() == TokenType.EOF)
 			return;
 		
@@ -59,7 +62,20 @@ public class Parser {
 		}
 		System.out.print(builder.toString());
 	}
-	
+
+
+	public void eval(boolean isPrint)
+			throws UndefinedBehaviorException, NoSuchMethodException,
+			IllegalAccessException, InvocationTargetException, ClassNotFoundException {
+		System.out.println("#### Project3: Evaluation Result ####");
+		for (TreeNode node : this.rootList){
+			TreeNode evalRes = this.Eval(node);
+			this.resultList.add(evalRes);
+			if(isPrint)
+				System.out.println(TreeUtil.printListNotation(evalRes));
+		}
+	}
+
 	private TreeNode parseExpression(){
 		TreeNode node = new TreeNode(); // node for current terminal/non-terminal
 		Token curToken = scn.getCurrentToken();

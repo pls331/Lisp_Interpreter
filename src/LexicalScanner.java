@@ -62,7 +62,7 @@ public class LexicalScanner {
 	}
 	
 	protected Token getNextToken(){
-		/**
+		/*
 		 * 	keep counters for how many literal atoms, numeric atoms,
 		 * 	open parentheses, and closing parentheses were found
 		 * 	in the input file.
@@ -83,7 +83,7 @@ public class LexicalScanner {
 			}
 			// white space and cariage return and line feed
 			else if (c == ' ' || c == '\n' || c == '\r'){
-				if (builder.length() == 0) ; // go to next char
+				if(builder.length() == 0) ; // go to next char
 				else isTokenFind = true; // output the current token
 			}
 			// open parentheses and closing parentheses

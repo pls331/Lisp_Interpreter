@@ -1,8 +1,6 @@
 package util;
 
-/**
- * Created by lenovo1 on 2017/2/16.
- */
+
 public class TreeUtil {
     public static TreeNode nodeNIL = new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM));
     public static TreeNode nodeT = new TreeNode(new Token("T", TokenType.LITERAL_ATOM));
@@ -71,4 +69,30 @@ public class TreeUtil {
     }
 
 
+    public static String printListNotation(TreeNode root) {
+        if(root == null) return "";
+        if(root.isLeaf()) return String.format("(%s)", root.getLexicalVal());
+
+        StringBuilder builder = new StringBuilder();
+        listNotationHelper(root, builder);
+        return builder.toString();
+    }
+
+    private static void listNotationHelper(TreeNode root, StringBuilder builder){
+        if(root == null) return;
+        if(root.isLeaf()) {
+            builder.append(root.getLexicalVal());
+            return;
+        }
+
+        TreeNode cur = root, left = null;
+        builder.append("(");
+        while(cur != null){
+            left = cur.getLeft();
+            listNotationHelper(left, builder);
+            cur = cur.getRight();
+            if(cur != null) builder.append(" ");
+        }
+        builder.append(")");
+    }
 }
