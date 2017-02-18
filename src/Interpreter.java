@@ -1,8 +1,6 @@
 
 import exception.UndefinedBehaviorException;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -28,9 +26,9 @@ public class Interpreter {
 
 	public static void main(String[] args) throws IOException {
         //region create STDIN from file
-		InputStream is = null;
-		is = new FileInputStream(new File("EvaluateTest.txt"));
-		System.setIn(is);
+//		InputStream is = null;
+//		is = new FileInputStream(new File("EvaluateTest.txt"));
+//		System.setIn(is);
         //endregion
 
         //region read stdin & print test file
@@ -43,7 +41,7 @@ public class Interpreter {
 		Interpreter interpreter = new Interpreter(System.in);
 
 		System.out.println("#### Project2: Parser PrettyPrint ####");
-		interpreter.parse( true ); // Project 2 output
+		interpreter.parse( false ); // Project 2 output
         interpreter.eval(true);
 //		System.out.println("\n#### Project1: Input Stream Statistics ####");
 //		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
