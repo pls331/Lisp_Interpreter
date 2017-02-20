@@ -121,7 +121,7 @@ public interface BuiltInFunctions {
             if(! Atom(s1).equals(nodeT)){
                 s1 = Eval(s1);  // recursively eval s1
             }
-            Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeNIL)),
+            Preconditions.checkUndefinedBehavior((Atom(s1).equals(nodeT)),
                     "Must NOT be an Atom.");
 
             // use reflection to call by function name

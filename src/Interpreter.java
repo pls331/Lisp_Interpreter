@@ -1,4 +1,3 @@
-
 import exception.UndefinedBehaviorException;
 
 import java.io.IOException;
@@ -25,24 +24,24 @@ public class Interpreter {
 	}
 
 	public static void main(String[] args) throws IOException {
-        //region create STDIN from file
-//		InputStream is = null;
-//		is = new FileInputStream(new File("EvaluateTest.txt"));
-//		System.setIn(is);
-        //endregion
+		//region create STDIN from file
+//              InputStream is = null;
+//              is = new FileInputStream(new File("EvaluateTest.txt"));
+//              System.setIn(is);
+		//endregion
 
-        //region read stdin & print test file
-//		int cInt = System.in.read();
-//		while (cInt != -1){
-//			System.out.println( (char) cInt );
-//			cInt = System.in.read();
-//		}
-        //endregion
+		//region read stdin & print test file
+//              int cInt = System.in.read();
+//              while (cInt != -1){
+//                      System.out.println( (char) cInt );
+//                      cInt = System.in.read();
+//              }
+		//endregion
 		Interpreter interpreter = new Interpreter(System.in);
 
 		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( false ); // Project 2 output
-        interpreter.eval(true);
+		interpreter.eval(true);
 //		System.out.println("\n#### Project1: Input Stream Statistics ####");
 //		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
 //		System.out.println("__Interpreter Finished Excecution.__");

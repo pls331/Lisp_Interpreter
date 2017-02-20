@@ -2,3 +2,9 @@
     (PLUS 12 55)   (EQ 12 55)  (QUOTE(234 2))  (CAR (QUOTE(12 123)))  (CDR (QUOTE(12 123)))
     (CAR (CAR (CONS (QUOTE (1 2 3)) 55)))
     (COND (T (PLUS 1 2)))    (CONS 12 55)    (CONS 2 (CONS 3(CONS 4 5)))
+
+
+
+
+
+
