@@ -16,7 +16,7 @@ public class Preconditions {
     public static void checkUndefinedBehavior(boolean expr, String msg)
         throws UndefinedBehaviorException{
         if(expr){
-                throw new UndefinedBehaviorException(msg);
+                throw new UndefinedBehaviorException("UndefinedBehavior - " + msg);
             }
     }
 

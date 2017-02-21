@@ -169,7 +169,11 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         assertTrue(nil.equals(obj.Less(node3, node2)))
         assertTrue(T.equals(obj.Greater(node3, node2)))
         assertTrue(nil.equals(obj.Greater(node2, node3)))
-
+        obj.aList.put("PLS", new Token("ABC", TokenType.LITERAL_ATOM))
+        println obj.aList.get("PLS")
+        println obj.aList.get("PPP")
+        println obj.aList.containsKey("PLS")
+        println obj.aList.containsKey("slx")
 
     }
 }

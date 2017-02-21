@@ -1,5 +1,7 @@
 import exception.UndefinedBehaviorException;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -25,9 +27,9 @@ public class Interpreter {
 
 	public static void main(String[] args) throws IOException {
 		//region create STDIN from file
-//              InputStream is = null;
-//              is = new FileInputStream(new File("EvaluateTest.txt"));
-//              System.setIn(is);
+              InputStream is = null;
+              is = new FileInputStream(new File("EvaluateTest.txt"));
+              System.setIn(is);
 		//endregion
 
 		//region read stdin & print test file
