@@ -1,12 +1,10 @@
 import exception.UndefinedBehaviorException;
 import functions.BuiltInFunctions;
-import util.Token;
-import util.TokenType;
-import util.TreeNode;
-import util.TreeUtil;
+import util.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 
@@ -26,7 +24,7 @@ public class Parser implements BuiltInFunctions{
 	 */
 	private LexicalScanner scn;
 	private ArrayList<TreeNode> rootList;
-	private ArrayList<TreeNode> resultList;
+	public ArrayList<TreeNode> resultList;
 
 	public Parser(LexicalScanner scn) {
 		// Initialize parser
@@ -64,15 +62,16 @@ public class Parser implements BuiltInFunctions{
 	}
 
 
-	public void eval(boolean isPrint)
+	public ArrayList<TreeNode> eval(boolean isPrint)
 			throws UndefinedBehaviorException, NoSuchMethodException,
 			IllegalAccessException, InvocationTargetException, ClassNotFoundException {
 		for (TreeNode node : this.rootList){
-			TreeNode evalRes = this.Eval(node);
+			TreeNode evalRes = this.Eval(node, new HashMap<>());
 			this.resultList.add(evalRes);
 			if(isPrint)
-				System.out.println(TreeUtil.printListNotation(evalRes));
+				System.out.println(TreeUtil.getListNotation(evalRes));
 		}
+		return this.resultList;
 	}
 
 	private TreeNode parseExpression(){

@@ -6,17 +6,18 @@ import util.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import static util.TreeUtil.*;
 
 /**
  * Created by lenovo1 on 2017/2/7.
  */
-public interface BuiltInFunctions {
-    HashMap<TreeNode, Pair<TreeNode>> dList = new HashMap(); // (Function, (formallist, body))
-    HashMap<TreeNode, TreeNode> aList = new HashMap<>(); // (Atom, Atom)
+public interface BuiltInFunctions extends ReservedName{
+    HashMap<String, Pair<TreeNode>> dList = new HashMap<>(); // (FunctionName, (formallist, body))
 
-    default TreeNode Eval(TreeNode node)
+
+    default TreeNode Eval(TreeNode node, HashMap<String,TreeNode> aList)
             throws UndefinedBehaviorException, ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, IllegalAccessException {
 
@@ -27,29 +28,29 @@ public interface BuiltInFunctions {
 
         // <editor-fold desc="node ::= Atom">
         if(Atom(node).equals(nodeT)){
-            if(node.equals(nodeT) || node.equals(nodeNIL)){
+            if(node.equals(nodeT) || node.equals(nodeNIL)){  // evaluate to itself
                 ret = node;
             }
-            else if(node.getTokenType() == TokenType.NUMERIC_ATOM){
+            else if(node.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
                 ret = node;
-            }else if(node.getTokenType() == TokenType.LITERAL_ATOM){
-                TreeNode varName = node;
-                if (! aList.containsKey(varName)){
-                    Preconditions.checkUndefinedBehavior(true,
-                            "Variable has not been Declared/Init. Variable Name:" + varName);
-                }
-                ret = aList.get(varName);
+            }else if(node.getTokenType() == TokenType.LITERAL_ATOM){  // get from aList
+                String varName = node.getLexicalVal();
+                Preconditions.checkUndefinedBehavior(
+                        ! aList.containsKey(varName),
+                        "Variable has not been Declared/Init. " +
+                                "\n          Variable Name:" + varName +
+                                "\n          aList: " + aList.toString());
+                ret = aList.get(varName);  // list or numerical atom
             }
             else{
-                // TODO change in Project4 -> function cal
                 Preconditions.checkUndefinedBehavior(true, "Undefined Behavior for a single atom.");
             }
-
             return ret;
         }
         //</editor-fold>
 
-        // <editor-fold desc="node ::= List">
+
+        // <editor-fold desc="node ::= apply a Function">
         TreeNode s1;
         TreeNode s2;
         TreeNode s3;
@@ -57,99 +58,99 @@ public interface BuiltInFunctions {
 
         if(Car(node).getTokenType() != TokenType.LITERAL_ATOM)
             Preconditions.checkUndefinedBehavior(true,
-                    String.format("%s is not a valid function.", Car(node).getLexicalVal()));
+                    String.format("Function name must be a Literal Atom.", Car(node).getLexicalVal()));
 
-        String builtInFunctName = Car(node).getLexicalVal();
+        String functionName = Car(node).getLexicalVal();
         //<editor-fold desc="Arithmetic Operator - Binary - Numeric Atom Input">
-        if(builtInFunctName.equals("PLUS")
-                || builtInFunctName.equals("MINUS")
-                || builtInFunctName.equals("TIMES")
-                || builtInFunctName.equals("GREATER")
-                || builtInFunctName.equals("LESS")){
+        if(functionName.equals("PLUS")
+                || functionName.equals("MINUS")
+                || functionName.equals("TIMES")
+                || functionName.equals("GREATER")
+                || functionName.equals("LESS")){
             // Length == 3
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
-            s1 = Eval(s1);  // recursively eval s1
-            s2 = Eval(s2); // recursively eval s2
+            s1 = Eval(s1, aList);  // recursively eval s1
+            s2 = Eval(s2, aList); // recursively eval s2
             // Numeric Atoms after eval
             Preconditions.checkUndefinedBehavior(! (isNumeric(s1) && isNumeric(s2)), "NOT Numeric Atom" );
             // use reflection to call by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl, cl).invoke(this, s1, s2);
+            ret = (TreeNode) getBuiltInMethod(functionName, cl, cl).invoke(this, s1, s2);
         }
             //</editor-fold>
 
         //<editor-fold desc="EQ - Binary - Atom Input">
-        else if(builtInFunctName.equals("EQ")){
+        else if(functionName.equals("EQ")){
             // Length == 3
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
-            s1 = Eval(s1);  // recursively eval s1
-            s2 = Eval(s2); // recursively eval s2
+            s1 = Eval(s1, aList);  // recursively eval s1
+            s2 = Eval(s2, aList); // recursively eval s2
             Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT) && Atom(s2).equals(nodeT)),
                     "Must be an Atom.");
 
             // use reflection to call by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl, cl).invoke(this, s1, s2);
+            ret = (TreeNode) getBuiltInMethod(functionName, cl, cl).invoke(this, s1, s2);
         }
             //</editor-fold>
 
         //<editor-fold desc="ATOM | INT | NULL - Single - Atom Input">
-        else if(builtInFunctName.equals("ATOM")
-                || builtInFunctName.equals("INT")
-                || builtInFunctName.equals("NULL")){
+        else if(functionName.equals("ATOM")
+                || functionName.equals("INT")
+                || functionName.equals("NULL")){
             // Length == 2
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             s1 = Car(Cdr(node));
-            s1 = Eval(s1);  // recursively eval s1
+            s1 = Eval(s1, aList);  // recursively eval s1
             System.out.println(s1);
 //            TODO evaluate the atom from aList
 //            Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT)), "Must be an Atom.");
             // use reflection to call the function by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl).invoke(this, s1);
+            ret = (TreeNode) getBuiltInMethod(functionName, cl).invoke(this, s1);
         }
             //</editor-fold>
 
         //<editor-fold desc="CAR | CDR - Single - List Input">
-        else if(builtInFunctName.equals("CAR")
-                || builtInFunctName.equals("CDR")){
+        else if(functionName.equals("CAR")
+                || functionName.equals("CDR")){
             // Length == 2
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             s1 = Car(Cdr(node));
-            s1 = Eval(s1);  // recursively eval s1
+            s1 = Eval(s1, aList);  // recursively eval s1
             Preconditions.checkUndefinedBehavior((Atom(s1).equals(nodeT)), "Must NOT be an Atom.");
 
             // use reflection to call by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl).invoke(this, s1);
+            ret = (TreeNode) getBuiltInMethod(functionName, cl).invoke(this, s1);
         }
             //</editor-fold>
 
         //<editor-fold desc="CONS  - Single - List/Atom Input">
-        else if(builtInFunctName.equals("CONS")){
+        else if(functionName.equals("CONS")){
             // Length == 3
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
-            s1 = Eval(s1);  // recursively eval s1
-            s2 = Eval(s2); // recursively eval s2
+            s1 = Eval(s1, aList);  // recursively eval s1
+            s2 = Eval(s2, aList); // recursively eval s2
             // use reflection to call by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl, cl).invoke(this, s1, s2);
+            ret = (TreeNode) getBuiltInMethod(functionName, cl, cl).invoke(this, s1, s2);
         }
             //</editor-fold>
 
         //<editor-fold desc="QUOTE  - List Input">
-        else if(builtInFunctName.equals("QUOTE")){
+        else if(functionName.equals("QUOTE")){
             // Length == 2
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             s1 = Car(Cdr(node));
             // use reflection to call by function name
             ret = s1;
         }
-            //</editor-fold>
+        //</editor-fold>
 
         //<editor-fold desc="COND - Using on demand evaluation">
-        else if(builtInFunctName.equals("COND")){
+        else if(functionName.equals("COND")){
             Preconditions.checkUndefinedBehavior( Atom(Cdr(node)).equals(nodeT), "Length must be > 1");
             TreeNode curNode = Cdr(node);
             TreeNode s = null, b = null, e = null;
@@ -160,8 +161,8 @@ public interface BuiltInFunctions {
                 Preconditions.checkUndefinedBehavior(! Atom(Cdr(Cdr(s))).equals(nodeT), "Length Must equals 2");
                 b = Car(s);
                 e = Car(Cdr(s));
-                if(! this.Eval(b).equals(nodeNIL)){
-                    ret = this.Eval(e);
+                if(! this.Eval(b, aList).equals(nodeNIL)){
+                    ret = this.Eval(e, aList);
                     break;
                 }
                 curNode = Cdr(curNode);
@@ -171,24 +172,43 @@ public interface BuiltInFunctions {
             }
 
         }
-            //</editor-fold>
+        //</editor-fold>
 
         //<editor-fold desc="DEFUN - Functon Definition">
-        else if(builtInFunctName.equals("DEFUN")){
+        else if(functionName.equals("DEFUN")){
             // Length == 4
-            Preconditions.checkUndefinedBehavior(! Car(Cdr(Cdr(Cdr(node)))).equals(nodeNIL), "Length != 3");
-            s1 = Car(Cdr(node)); // user-defined function name
+            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(node)))).equals(nodeNIL),
+                                                "Function Declaration List Length != 4");
+            s1 = Car(Cdr(node)); // user-defined function name, must be literal atom
             s2 = Car(Cdr(Cdr(node))); // formals list
-            s3 = Car(Cdr(Car(Cdr(node)))); // body
+            s3 = Car(Cdr(Cdr(Cdr(node)))); // body
+            // check preconditions
+            Preconditions.checkUndefinedBehavior(
+                    ! s1.getTokenType().equals(TokenType.LITERAL_ATOM),
+                    "Function Name Atom must be Literal Atom.");
+            Preconditions.checkUndefinedBehavior(
+                    ReservedName.Function.contain(s1.getLexicalVal()),
+                    "Function name must be different from built-in functions.");
+            isUniqueAndValid(s2); // unique & not use reserved name & literal atom
+
             // add function into dlist
-            dList.put(s1, new Pair<>(s2, s3));
+            dList.put(s1.getLexicalVal(), new Pair<>(s2, s3));
             // use reflection to call by function name
-            ret = (TreeNode) getBuiltInMethod(builtInFunctName, cl, cl).invoke(this, s1, s2);
+            ret = s1;
         }
         //</editor-fold>
 
+        //<editor-fold desc="user-defined Function Call">
+        else if(dList.containsKey(functionName)){
+            Preconditions.checkUndefinedBehavior(   (Atom(Car(node)).equals(nodeNIL)),
+                                                   "First element must be atomic element");
+            ret = apply(    Car(node),
+                            evlist(Cdr(node), aList),
+                            aList );
+        }
+        //</editor-fold>
         else{
-            Preconditions.checkUndefinedBehavior(true, "Function does not match any of known ones.");
+            Preconditions.checkUndefinedBehavior(true, "undefined function "+ functionName );
         }
         //</editor-fold>
 
@@ -205,10 +225,76 @@ public interface BuiltInFunctions {
         return m;
     }
 
-    default TreeNode Defun(TreeNode node, HashMap aList, HashMap dList){
-        return null;
+    default TreeNode apply(TreeNode funcName, TreeNode actualParam, HashMap<String, TreeNode> aList)
+            throws ClassNotFoundException, NoSuchMethodException,
+                IllegalAccessException, InvocationTargetException {
+
+        TreeNode body = dList.get(funcName.getLexicalVal()).getSecond();
+        TreeNode paramList = dList.get(funcName.getLexicalVal()).getFirst();
+        HashMap<String, TreeNode> aList_new = addPairs(paramList, actualParam, aList);
+        return Eval(body, aList_new);
     }
 
+    default HashMap<String, TreeNode> addPairs(TreeNode paramList, TreeNode actualParams,
+                                                 HashMap<String, TreeNode> aList){
+        //TODO check length of param & actual
+        Preconditions.checkNotNull(paramList);
+        Preconditions.checkNotNull(actualParams);
+        TreeNode p = paramList;
+        TreeNode a = actualParams;
+        HashMap<String, TreeNode> newList = new HashMap<>(aList);
+        while(  !( p.equals(nodeNIL) || a.equals(nodeNIL) ) ){
+            newList.put(p.getLeft().getLexicalVal(), a.getLeft());
+            p = p.getRight();
+            a = a.getRight();
+        }
+        // param list and actual list must be of same length
+        Preconditions.checkUndefinedBehavior( !(p.equals(nodeNIL) && a.equals(nodeNIL)),
+                                            "Formals list have different length with Actual list");
+        return newList;
+    }
+
+    /*
+    Evaluate the actual list into a list of atoms.
+     */
+
+    default TreeNode evlist(TreeNode x, HashMap<String, TreeNode> aList)
+            throws ClassNotFoundException, NoSuchMethodException,
+            IllegalAccessException, InvocationTargetException {
+        if(x.equals(nodeNIL))
+            return nodeNIL;
+        return Cons(Eval(Car(x), aList), evlist(Cdr(x), aList));
+    }
+
+    /*
+    Check if the parameters in the list of function declaration are unique
+    and not same as reserved names.
+     */
+    default void isUniqueAndValid(TreeNode param_list){
+        TreeNode tmp = param_list;
+        TreeNode p;
+        String name;
+        HashSet<String> nameSet = new HashSet<>();
+        while (! tmp.equals(nodeNIL)){
+            p = tmp.getLeft();
+            name = p.getLexicalVal();
+
+            Preconditions.checkUndefinedBehavior(
+                    !(p.isLeaf() && p.getTokenType() == TokenType.LITERAL_ATOM),
+                    "In parameter list, only Literal Atom is accepted");
+
+            if(ReservedName.Function.contain(name) || ReservedName.Atom.contain(name)){
+                Preconditions.checkUndefinedBehavior(true,
+                        "Parameter name must be different with reserved words.");
+            }
+            if(nameSet.contains(name)){
+                Preconditions.checkUndefinedBehavior(true,
+                        "Parameter name must be unique.");
+            }
+            nameSet.add(name);
+            tmp = tmp.getRight();
+        }
+    }
 
     default TreeNode Car(TreeNode node)
             throws NullPointerException, UndefinedBehaviorException{

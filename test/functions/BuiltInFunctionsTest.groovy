@@ -5,7 +5,6 @@ import util.Token
 import util.TokenType
 import util.TreeNode
 import util.TreeUtil
-
 /**
  * Created by lenovo1 on 2017/2/16.
  */
@@ -172,6 +171,24 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         println obj.aList.get("PPP")
         println obj.aList.containsKey("PLS")
         println obj.aList.containsKey("slx")
+
+    }
+
+    void testHashmapTokenPair(){
+        HashMap<Token, Token> map = new HashMap<>();
+        Token x = new Token("X", TokenType.LITERAL_ATOM)
+        Token x2 = new Token("X", TokenType.LITERAL_ATOM)
+        Token y = new Token("Y", TokenType.LITERAL_ATOM)
+        Token five = new Token("5", TokenType.NUMERIC_ATOM)
+        Token six = new Token("6", TokenType.NUMERIC_ATOM)
+        map.put(x, five)
+        map.put(y, six)
+        println map
+        println map.get(x)
+        println map.get(y)
+        println map.containsKey(x)
+        HashMap<Token, Token> new_map = new HashMap<>(map);
+        println new_map.containsKey(x2)
 
     }
 }

@@ -1,10 +1,11 @@
 import exception.UndefinedBehaviorException;
+import util.TreeNode;
+import util.TreeUtil;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 
 
 public class Interpreter {
@@ -27,9 +28,9 @@ public class Interpreter {
 
 	public static void main(String[] args) throws IOException {
 		//region create STDIN from file
-              InputStream is = null;
-              is = new FileInputStream(new File("EvaluateTest.txt"));
-              System.setIn(is);
+//              InputStream is = null;
+//              is = new FileInputStream(new File("EvaluateTest.txt"));
+//              System.setIn(is);
 		//endregion
 
 		//region read stdin & print test file
@@ -89,10 +90,15 @@ public class Interpreter {
 		}catch(Exception e){
         	e.printStackTrace();
 		}
-		finally {
-            System.exit(-2);
-        }
 
     }
-	
+
+    public ArrayList<String> getResult(){
+		ArrayList<String> resList = new ArrayList<>();
+		for(TreeNode t : this.parser.resultList){
+			resList.add(TreeUtil.getListNotation(t));
+		}
+		return resList;
+	}
+
 }

@@ -68,7 +68,7 @@ public class TreeUtil {
     }
 
 
-    public static String printListNotation(TreeNode root) {
+    public static String getListNotation(TreeNode root) {
         if(root == null) return "";
 
         StringBuilder builder = new StringBuilder();

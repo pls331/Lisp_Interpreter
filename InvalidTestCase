@@ -2,10 +2,15 @@
 (ATOM T12)
 (INT T12)
 (NULL T12)
+(F 12)
+((QUOTE(F)) 5)
+(DEFUN F (X X) X) (F 5 6)
+(DEFUN F (X 123) X) (F 5)
+(DEFUN F (X T) X) (F 5)
+(DEFUN F (X NIL) X) (F 5)
+(DEFUN F (X CAR) X) (F 5)
+(DEFUN F (X Y) X) (F 5)
+(DEFUN F (X Y) X) (F 5 6 7)
 
 
 
-(DEFUN F (X) X) (F 5)
-
-(DEFUN F (X) (CDR X) ) (F (QUOTE(5 6)) )
-(DEFUN F (X) (CDR X) ) (F (F(QUOTE(5 6))) )

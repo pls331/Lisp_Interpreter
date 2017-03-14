@@ -81,6 +81,8 @@ public class TreeNode {
     }
 
     public TokenType getTokenType(){
+        if(token == null)
+            return null;
         return token.getType();
     }
 
