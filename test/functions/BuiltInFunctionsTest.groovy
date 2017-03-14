@@ -108,8 +108,8 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         MyClass obj = new MyClass()
 
         n2.setToken(new Token("ATOM", TokenType.LITERAL_ATOM))
-        n4.setToken(new Token("ABD7", TokenType.LITERAL_ATOM))
-        assertTrue(obj.Eval(n1).equals(T)) // ABD7 is ATOM
+        n4.setToken(new Token("33", TokenType.NUMERIC_ATOM))
+        assertTrue(obj.Eval(n1).equals(T)) // 33 is ATOM
         n4.setToken(new Token("22", TokenType.NUMERIC_ATOM))
         assertTrue(obj.Eval(n1).equals(T)) // 22 is ATOM
         n4.setToken(new Token("NIL", TokenType.LITERAL_ATOM))
@@ -120,8 +120,8 @@ class BuiltInFunctionsTest extends GroovyTestCase {
 
 
         n2.setToken(new Token("INT", TokenType.LITERAL_ATOM))
-        n4.setToken(new Token("ABD7", TokenType.LITERAL_ATOM))
-        assertTrue(obj.Eval(n1).equals(Nil)) // ABD7 is ATOM
+        n4.setToken(new Token("33", TokenType.NUMERIC_ATOM))
+        assertTrue(obj.Eval(n1).equals(T)) // 33 is ATOM
         n4.setToken(new Token("22", TokenType.NUMERIC_ATOM))
         assertTrue(obj.Eval(n1).equals(T)) // 22 is ATOM
         n4.setToken(new Token("NIL", TokenType.LITERAL_ATOM))
@@ -131,8 +131,8 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         n4.setToken(new Token("2", TokenType.LITERAL_ATOM))
 
         n2.setToken(new Token("NULL", TokenType.LITERAL_ATOM))
-        n4.setToken(new Token("ABD7", TokenType.LITERAL_ATOM))
-        assertTrue(obj.Eval(n1).equals(Nil)) // ABD7 is ATOM
+        n4.setToken(new Token("33", TokenType.NUMERIC_ATOM))
+        assertTrue(obj.Eval(n1).equals(Nil)) // 33 is ATOM
         n4.setToken(new Token("22", TokenType.NUMERIC_ATOM))
         assertTrue(obj.Eval(n1).equals(Nil)) // 22 is ATOM
         n4.setToken(new Token("NIL", TokenType.LITERAL_ATOM))
@@ -140,8 +140,6 @@ class BuiltInFunctionsTest extends GroovyTestCase {
         n4.setToken(new Token("T", TokenType.LITERAL_ATOM))
         assertTrue(obj.Eval(n1).equals(Nil)) // T is ATOM
         n4.setToken(new Token("2", TokenType.LITERAL_ATOM))
-
-
 
     }
 
