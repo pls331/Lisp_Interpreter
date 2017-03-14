@@ -41,7 +41,7 @@ public class Interpreter {
 		//endregion
 		Interpreter interpreter = new Interpreter(System.in);
 
-		System.out.println("#### Project2: Parser PrettyPrint ####");
+//		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( false ); // Project 2 output
 		interpreter.eval(true);
 //		System.out.println("\n#### Project1: Input Stream Statistics ####");
