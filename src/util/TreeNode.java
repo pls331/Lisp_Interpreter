@@ -85,6 +85,10 @@ public class TreeNode {
     }
 
     @Override
+    /*
+    TreeNode is same when their token is same.
+    TreeNode could not be null;
+     */
     public boolean equals(Object obj)
         throws NullPointerException {
 

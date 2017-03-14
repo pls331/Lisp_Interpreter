@@ -1,0 +1,11 @@
+(1)
+(ATOM T12)
+(INT T12)
+(NULL T12)
+
+
+
+(DEFUN F (X) X) (F 5)
+
+(DEFUN F (X) (CDR X) ) (F (QUOTE(5 6)) )
+(DEFUN F (X) (CDR X) ) (F (F(QUOTE(5 6))) )
