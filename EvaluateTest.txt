@@ -33,9 +33,9 @@
 
 (CDR (QUOTE (2 3 4 5)))
 
-(CAR ABD)
+()
+NIL
 
-
-
+(ATOM (QUOTE (4 5)))
 
 

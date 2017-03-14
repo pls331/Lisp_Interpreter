@@ -67,7 +67,6 @@ public class Parser implements BuiltInFunctions{
 	public void eval(boolean isPrint)
 			throws UndefinedBehaviorException, NoSuchMethodException,
 			IllegalAccessException, InvocationTargetException, ClassNotFoundException {
-		System.out.println("#### Project3: Evaluation Result ####");
 		for (TreeNode node : this.rootList){
 			TreeNode evalRes = this.Eval(node);
 			this.resultList.add(evalRes);

@@ -41,7 +41,7 @@ public class Interpreter {
 		//endregion
 		Interpreter interpreter = new Interpreter(System.in);
 
-		System.out.println("#### Project2: Parser PrettyPrint ####");
+//		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( false ); // Project 2 output
 		interpreter.eval(true);
 //		System.out.println("\n#### Project1: Input Stream Statistics ####");
@@ -81,9 +81,11 @@ public class Interpreter {
         {
             e.printStackTrace();
         }catch (UndefinedBehaviorException udbe){
-            System.out.println(String.format("ERROR: %s", udbe.getMessage()));
+        	System.out.println(String.format("ERROR: %s", udbe.getMessage()));
+			udbe.printStackTrace();
         }catch (NullPointerException npe){
 			System.out.println(String.format("ERROR: %s", npe.getMessage()));
+			npe.printStackTrace();
 		}catch(Exception e){
         	e.printStackTrace();
 		}

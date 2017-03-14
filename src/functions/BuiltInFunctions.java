@@ -18,6 +18,7 @@ import static util.TreeUtil.*;
 public interface BuiltInFunctions {
     HashMap<String, Token> aList = new HashMap(); // map from lexcal val to a token
 
+
     default TreeNode Eval(TreeNode node)
             throws UndefinedBehaviorException, ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, IllegalAccessException {
@@ -103,8 +104,10 @@ public interface BuiltInFunctions {
             Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             s1 = Car(Cdr(node));
             s1 = Eval(s1);  // recursively eval s1
+            System.out.println(s1);
+//            TODO evaluate the atom from aList
             Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT)), "Must be an Atom.");
-            // use reflection to call by function name
+            // use reflection to call the function by function name
             ret = (TreeNode) getBuiltInMethod(functName, cl).invoke(this, s1);
         }
             //</editor-fold>
