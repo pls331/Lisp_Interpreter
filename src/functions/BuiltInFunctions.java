@@ -38,8 +38,8 @@ public interface BuiltInFunctions extends ReservedName{
                 Preconditions.checkUndefinedBehavior(
                         ! aList.containsKey(varName),
                         "Variable has not been Declared/Init. " +
-                                "\n          Variable Name:" + varName +
-                                "\n          aList: " + aList.toString());
+                                " Variable Name:" + varName +
+                                " aList: " + aList.toString());
                 ret = aList.get(varName);  // list or numerical atom
             }
             else{
@@ -68,7 +68,11 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("GREATER")
                 || functionName.equals("LESS")){
             // Length == 3
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2 ");
+            }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
             s1 = Eval(s1, aList);  // recursively eval s1
@@ -83,7 +87,11 @@ public interface BuiltInFunctions extends ReservedName{
         //<editor-fold desc="EQ - Binary - Atom Input">
         else if(functionName.equals("EQ")){
             // Length == 3
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 3");
+            }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
             s1 = Eval(s1, aList);  // recursively eval s1
@@ -101,10 +109,14 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("INT")
                 || functionName.equals("NULL")){
             // Length == 2
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2");
+            }
             s1 = Car(Cdr(node));
             s1 = Eval(s1, aList);  // recursively eval s1
-            System.out.println(s1);
+
 //            TODO evaluate the atom from aList
 //            Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT)), "Must be an Atom.");
             // use reflection to call the function by function name
@@ -116,7 +128,11 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("CAR")
                 || functionName.equals("CDR")){
             // Length == 2
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2");
+            }
             s1 = Car(Cdr(node));
             s1 = Eval(s1, aList);  // recursively eval s1
             Preconditions.checkUndefinedBehavior((Atom(s1).equals(nodeT)), "Must NOT be an Atom.");
@@ -129,7 +145,11 @@ public interface BuiltInFunctions extends ReservedName{
         //<editor-fold desc="CONS  - Single - List/Atom Input">
         else if(functionName.equals("CONS")){
             // Length == 3
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 3");
+            }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
             s1 = Eval(s1, aList);  // recursively eval s1
@@ -177,18 +197,28 @@ public interface BuiltInFunctions extends ReservedName{
         //<editor-fold desc="DEFUN - Functon Definition">
         else if(functionName.equals("DEFUN")){
             // Length == 4
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(node)))).equals(nodeNIL),
+            try{
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(node)))).equals(nodeNIL),
                                                 "Function Declaration List Length != 4");
+            }catch(UndefinedBehaviorException udbe){
+                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 4");
+            }
             s1 = Car(Cdr(node)); // user-defined function name, must be literal atom
             s2 = Car(Cdr(Cdr(node))); // formals list
             s3 = Car(Cdr(Cdr(Cdr(node)))); // body
             // check preconditions
             Preconditions.checkUndefinedBehavior(
+                    Atom(s1).equals(nodeNIL),
+                    "Function Name could not be list.");
+            Preconditions.checkUndefinedBehavior(
                     ! s1.getTokenType().equals(TokenType.LITERAL_ATOM),
                     "Function Name Atom must be Literal Atom.");
             Preconditions.checkUndefinedBehavior(
                     ReservedName.Function.contain(s1.getLexicalVal()),
-                    "Function name must be different from built-in functions.");
+                    "Function name must be different from Built-in Function Names.");
+            Preconditions.checkUndefinedBehavior(
+                    ReservedName.Atom.contain(s1.getLexicalVal()),
+                    "Function name must be different from Built-in Atom Names.");
             isUniqueAndValid(s2); // unique & not use reserved name & literal atom
 
             // add function into dlist
@@ -273,7 +303,7 @@ public interface BuiltInFunctions extends ReservedName{
     default void isUniqueAndValid(TreeNode param_list){
         TreeNode tmp = param_list;
         TreeNode p;
-        String name;
+        String name = null;
         HashSet<String> nameSet = new HashSet<>();
         while (! tmp.equals(nodeNIL)){
             p = tmp.getLeft();
@@ -282,15 +312,13 @@ public interface BuiltInFunctions extends ReservedName{
             Preconditions.checkUndefinedBehavior(
                     !(p.isLeaf() && p.getTokenType() == TokenType.LITERAL_ATOM),
                     "In parameter list, only Literal Atom is accepted");
+            Preconditions.checkUndefinedBehavior(
+                ReservedName.Function.contain(name) || ReservedName.Atom.contain(name),
+                "Parameter name must be different with reserved words.");
+            Preconditions.checkUndefinedBehavior(
+                        nameSet.contains(name),
+                    "Parameter name must be unique.");
 
-            if(ReservedName.Function.contain(name) || ReservedName.Atom.contain(name)){
-                Preconditions.checkUndefinedBehavior(true,
-                        "Parameter name must be different with reserved words.");
-            }
-            if(nameSet.contains(name)){
-                Preconditions.checkUndefinedBehavior(true,
-                        "Parameter name must be unique.");
-            }
             nameSet.add(name);
             tmp = tmp.getRight();
         }
@@ -299,14 +327,14 @@ public interface BuiltInFunctions extends ReservedName{
     default TreeNode Car(TreeNode node)
             throws NullPointerException, UndefinedBehaviorException{
         Preconditions.checkNotNull(node);
-        Preconditions.checkUndefinedBehavior(node.isLeaf(), "in Car @ " + node.toString());
+        Preconditions.checkUndefinedBehavior(node.isLeaf(), "Cannot be atom @Car: " + node.toString());
         return node.getLeft();
     }
 
     default TreeNode Cdr(TreeNode node)
             throws NullPointerException, UndefinedBehaviorException{
         Preconditions.checkNotNull(node);
-        Preconditions.checkUndefinedBehavior(node.isLeaf(), "Cdr:" + node.toString());
+        Preconditions.checkUndefinedBehavior(node.isLeaf(), "Cannot be atom @Cdr:" + node.toString());
         return node.getRight();
     }
 

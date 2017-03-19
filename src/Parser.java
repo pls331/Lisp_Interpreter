@@ -25,12 +25,14 @@ public class Parser implements BuiltInFunctions{
 	private LexicalScanner scn;
 	private ArrayList<TreeNode> rootList;
 	public ArrayList<TreeNode> resultList;
+	public ArrayList<String> exMsgList;
 
 	public Parser(LexicalScanner scn) {
 		// Initialize parser
 		this.scn = scn;
 		this.rootList = new ArrayList<>(); // root of parse tree
 		this.resultList = new ArrayList<>(); // root of parse tree
+		this.exMsgList = new ArrayList<>(); //
 	}
 	
 	private void moveToNextToken(){
@@ -62,14 +64,39 @@ public class Parser implements BuiltInFunctions{
 	}
 
 
-	public ArrayList<TreeNode> eval(boolean isPrint)
-			throws UndefinedBehaviorException, NoSuchMethodException,
-			IllegalAccessException, InvocationTargetException, ClassNotFoundException {
+	public ArrayList<TreeNode> eval(boolean isPrint, boolean isTesting){
+		boolean isExceptionCaught = false;
 		for (TreeNode node : this.rootList){
-			TreeNode evalRes = this.Eval(node, new HashMap<>());
-			this.resultList.add(evalRes);
-			if(isPrint)
-				System.out.println(TreeUtil.getListNotation(evalRes));
+			try{
+				isExceptionCaught = false;
+				TreeNode evalRes = this.Eval(node, new HashMap<>());
+				this.resultList.add(evalRes);
+				if(isPrint)
+					System.out.println(TreeUtil.getListNotation(evalRes));
+			}catch (ClassNotFoundException | NoSuchMethodException  |
+					IllegalAccessException  |InvocationTargetException e)
+			{
+				isExceptionCaught = true;
+				exMsgList.add(e.getMessage());
+//				e.printStackTrace();
+			}catch (UndefinedBehaviorException udbe){
+				if(!isTesting) System.out.println(String.format("ERROR: %s", udbe.getMessage()));
+				exMsgList.add(udbe.getMessage());
+				isExceptionCaught = true;
+//				udbe.printStackTrace();
+			}catch (NullPointerException npe){
+				if(!isTesting) System.out.println(String.format("ERROR: %s", npe.getMessage()));
+				exMsgList.add(npe.getMessage());
+				isExceptionCaught = true;
+//				npe.printStackTrace();
+			}catch(Exception e){
+				exMsgList.add(e.getMessage());
+				isExceptionCaught = true;
+//				e.printStackTrace();
+			}finally {
+				if(isExceptionCaught && ! isTesting) System.exit(-2);
+			}
+
 		}
 		return this.resultList;
 	}
