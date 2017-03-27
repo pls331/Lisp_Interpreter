@@ -43,3 +43,8 @@ NIL
 (DEFUN F (X Y) (PLUS Y X))
 (F (PLUS 5 6) (MINUS 6 5))
 (F (PLUS 5 6) 1)
+(DEFUN F (X Y) (PLUS Y X))
+(DEFUN G (X Y) (F X Y))
+(DEFUN H (X) (G X X))
+(G 1 2)
+(G (H 1) (H 2))
