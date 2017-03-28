@@ -15,6 +15,9 @@
 (DEFUN F (X CAR) X)
 (DEFUN F (X Y) X) (F 5)
 (DEFUN F (X Y) X) (F 5 6 7)
-
-
-
+(DEFUN F (CAR CDR) (PLUS 4 5))
+(PLUS 2)
+(PLUS 2 2 2)
+(MINUS 2)
+(MINUS 2 2 2)
+(NULL 2 2 2)

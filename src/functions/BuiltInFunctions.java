@@ -71,7 +71,7 @@ public interface BuiltInFunctions extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2 ");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
@@ -90,7 +90,7 @@ public interface BuiltInFunctions extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 3");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
@@ -112,7 +112,7 @@ public interface BuiltInFunctions extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node));
             s1 = Eval(s1, aList);  // recursively eval s1
@@ -131,7 +131,7 @@ public interface BuiltInFunctions extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 2");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node));
             s1 = Eval(s1, aList);  // recursively eval s1
@@ -148,7 +148,7 @@ public interface BuiltInFunctions extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 3");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node));
             s2 = Car(Cdr(Cdr(node)));
@@ -201,7 +201,7 @@ public interface BuiltInFunctions extends ReservedName{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(node)))).equals(nodeNIL),
                                                 "Function Declaration List Length != 4");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Length != 4");
+                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(node)); // user-defined function name, must be literal atom
             s2 = Car(Cdr(Cdr(node))); // formals list

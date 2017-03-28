@@ -3,7 +3,7 @@ UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aLis
 UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aList: {}
 UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aList: {}
 UndefinedBehavior - undefined function F
-UndefinedBehavior - Length != 4
+UndefinedBehavior - Formals list have different length with Actual list
 UndefinedBehavior - Function Name could not be list.
 UndefinedBehavior - Function name must be different from Built-in Atom Names.
 UndefinedBehavior - Function name must be different from Built-in Function Names.
@@ -13,5 +13,11 @@ UndefinedBehavior - In parameter list, only Literal Atom is accepted
 UndefinedBehavior - Parameter name must be different with reserved words.
 UndefinedBehavior - Parameter name must be different with reserved words.
 UndefinedBehavior - Parameter name must be different with reserved words.
+UndefinedBehavior - Formals list have different length with Actual list
+UndefinedBehavior - Formals list have different length with Actual list
+UndefinedBehavior - Parameter name must be different with reserved words.
+UndefinedBehavior - Formals list have different length with Actual list
+UndefinedBehavior - Formals list have different length with Actual list
+UndefinedBehavior - Formals list have different length with Actual list
 UndefinedBehavior - Formals list have different length with Actual list
 UndefinedBehavior - Formals list have different length with Actual list
