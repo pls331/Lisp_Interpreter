@@ -353,9 +353,9 @@ public interface BuiltInFunctions extends ReservedName{
             throws NullPointerException, UndefinedBehaviorException{
         Preconditions.checkNotNull(node);
         if(node.isLeaf()){
-            return new TreeNode(new Token("T",TokenType.LITERAL_ATOM));
+            return nodeT;
         }else{
-            return new TreeNode(new Token("NIL",TokenType.LITERAL_ATOM));
+            return nodeNIL;
         }
     }
 
@@ -363,9 +363,9 @@ public interface BuiltInFunctions extends ReservedName{
             throws NullPointerException, UndefinedBehaviorException {
         Preconditions.checkNotNull(node);
         if( node.isLeaf() && node.getToken().getType() == TokenType.NUMERIC_ATOM ){
-            return new TreeNode(new Token("T",TokenType.LITERAL_ATOM));
+            return nodeT;
         }else{
-            return new TreeNode(new Token("NIL",TokenType.LITERAL_ATOM));
+            return nodeNIL;
         }
     }
 
@@ -373,9 +373,9 @@ public interface BuiltInFunctions extends ReservedName{
             throws NullPointerException, UndefinedBehaviorException{
         Preconditions.checkNotNull(node); // undefined
         if( node.isLeaf() && TreeUtil.isNIL(node)){
-            return new TreeNode(new Token("T",TokenType.LITERAL_ATOM));
+            return nodeT;
         }else{
-            return new TreeNode(new Token("NIL",TokenType.LITERAL_ATOM));
+            return nodeNIL;
         }
     }
 
@@ -387,8 +387,8 @@ public interface BuiltInFunctions extends ReservedName{
         Preconditions.checkUndefinedBehavior(!node1.isLeaf(), "in Eq() @" + node1.toString());
         Preconditions.checkUndefinedBehavior(!node2.isLeaf(), "in Eq() @" + node2.toString());
         if(isEqual(node1, node2))
-            return new TreeNode(new Token("T",TokenType.LITERAL_ATOM));
-        return new TreeNode(new Token("NIL",TokenType.LITERAL_ATOM));
+            return nodeT;
+        return nodeNIL;
     }
 
     default TreeNode Plus(TreeNode node1, TreeNode node2)
@@ -451,8 +451,8 @@ public interface BuiltInFunctions extends ReservedName{
         int val1 = Integer.parseInt(node1.getLexicalVal());
         int val2 = Integer.parseInt(node2.getLexicalVal());
         if (val1 < val2)
-            return new TreeNode(new Token("T", TokenType.LITERAL_ATOM));
-        return new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM));
+            return nodeT;
+        return nodeNIL;
     }
 
     default TreeNode Greater(TreeNode node1, TreeNode node2)
@@ -469,7 +469,7 @@ public interface BuiltInFunctions extends ReservedName{
         int val1 = Integer.parseInt(node1.getLexicalVal());
         int val2 = Integer.parseInt(node2.getLexicalVal());
         if (val1 > val2)
-            return new TreeNode(new Token("T", TokenType.LITERAL_ATOM));
-        return new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM));
+            return nodeT;
+        return nodeNIL;
     }
 }
