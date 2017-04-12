@@ -1,6 +1,9 @@
 import exception.UndefinedBehaviorException;
-import functions.BuiltInFunctions;
-import util.*;
+import functions.StaticChecker;
+import util.Token;
+import util.TokenType;
+import util.TreeNode;
+import util.TreeUtil;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -15,7 +18,7 @@ import java.util.HashMap;
  *
  */
 //public class Parser implements BuiltInFunctions{
-public class Parser implements BuiltInFunctions{
+public class Parser implements StaticChecker{
 	/**
 	 * Context-free Gramma:
 	 * <Start> ::= <Expr> <Start> | <Expr> eof

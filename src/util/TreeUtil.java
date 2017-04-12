@@ -2,8 +2,9 @@ package util;
 
 
 public class TreeUtil {
-    public static TreeNode nodeNIL = new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM));
+    public static TreeNode nodeF = new TreeNode(new Token("F", TokenType.LITERAL_ATOM));
     public static TreeNode nodeT = new TreeNode(new Token("T", TokenType.LITERAL_ATOM));
+    public static TreeNode nodeNIL = new TreeNode(new Token("NIL", TokenType.LITERAL_ATOM));
 
     public static boolean isNIL(TreeNode node){
         if(node == null)
@@ -91,7 +92,7 @@ public class TreeUtil {
             cur = cur.getRight();
             if(cur.getRight() != null) builder.append(" ");
         }
-        if(! cur.equals(nodeNIL)){
+        if(! cur.equals(nodeF)){
             builder.append(" . ");
             builder.append(cur.getLexicalVal());
         }

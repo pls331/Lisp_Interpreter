@@ -1,6 +1,5 @@
 package functions;
 
-import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
 import util.*;
 
@@ -17,32 +16,6 @@ import static util.TreeUtil.*;
 public interface BuiltInFunctions extends ReservedName{
     HashMap<String, Pair<TreeNode>> dList = new HashMap<>(); // (FunctionName, (formallist, body))
 
-    default TypeSystem TypeChecking(TreeNode expr)
-            throws UndefinedBehaviorException, InvalidTypeException{
-        if (expr == null)
-            throw new NullPointerException("'null' can not be evaluated.");
-
-        TypeSystem ret = null;
-
-        // <editor-fold desc="node ::= Atom">
-        if(Atom(expr).equals(nodeT)){
-            if(expr.equals(nodeT) || ){  // evaluate to itself
-                ret = TypeSystem.BOOL;
-            }else if(expr.equals(nodeNIL){
-                ret = TypeSystem.LIST_NAT;
-            }
-            else if(expr.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
-                ret = expr;
-            }
-            else{
-                Preconditions.checkUndefinedBehavior(true, "Undefined Behavior for a single atom.");
-            }
-            return ret;
-        }
-        //</editor-fold>
-
-    }
-
     default TreeNode Eval(TreeNode expr, HashMap<String,TreeNode> aList)
             throws UndefinedBehaviorException, ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, IllegalAccessException {
@@ -54,7 +27,7 @@ public interface BuiltInFunctions extends ReservedName{
 
         // <editor-fold desc="node ::= Atom">
         if(Atom(expr).equals(nodeT)){
-            if(expr.equals(nodeT) || expr.equals(nodeNIL)){  // evaluate to itself
+            if(expr.equals(nodeT) || expr.equals(nodeF)){  // evaluate to itself
                 ret = expr;
             }
             else if(expr.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
@@ -95,7 +68,7 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("LESS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -114,7 +87,7 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("EQ")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -136,7 +109,7 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("NULL")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -155,7 +128,7 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("CDR")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -172,7 +145,7 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("CONS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -188,7 +161,7 @@ public interface BuiltInFunctions extends ReservedName{
         //<editor-fold desc="QUOTE  - List Input">
         else if(functionName.equals("QUOTE")){
             // Length == 2
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
+            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
             s1 = Car(Cdr(expr));
             // use reflection to call by function name
             ret = s1;
@@ -200,14 +173,14 @@ public interface BuiltInFunctions extends ReservedName{
             Preconditions.checkUndefinedBehavior( Atom(Cdr(expr)).equals(nodeT), "Length must be > 1");
             TreeNode curNode = Cdr(expr);
             TreeNode s = null, b = null, e = null;
-            while(! curNode.equals(nodeNIL)){
+            while(! curNode.equals(nodeF)){
                 s = Car(curNode);
                 Preconditions.checkUndefinedBehavior(Atom(s).equals(nodeT), "Must be a list");
                 // length of s == 2
                 Preconditions.checkUndefinedBehavior(! Atom(Cdr(Cdr(s))).equals(nodeT), "Length Must equals 2");
                 b = Car(s);
                 e = Car(Cdr(s));
-                if(! this.Eval(b, aList).equals(nodeNIL)){
+                if(! this.Eval(b, aList).equals(nodeF)){
                     ret = this.Eval(e, aList);
                     break;
                 }
@@ -224,7 +197,7 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("DEFUN")){
             // Length == 4
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(expr)))).equals(nodeNIL),
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(expr)))).equals(nodeF),
                                                 "Function Declaration List Length != 4");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
@@ -234,7 +207,7 @@ public interface BuiltInFunctions extends ReservedName{
             s3 = Car(Cdr(Cdr(Cdr(expr)))); // body
             // check preconditions
             Preconditions.checkUndefinedBehavior(
-                    Atom(s1).equals(nodeNIL),
+                    Atom(s1).equals(nodeF),
                     "Function Name could not be list.");
             Preconditions.checkUndefinedBehavior(
                     ! s1.getTokenType().equals(TokenType.LITERAL_ATOM),
@@ -256,7 +229,7 @@ public interface BuiltInFunctions extends ReservedName{
 
         //<editor-fold desc="user-defined Function Call">
         else if(dList.containsKey(functionName)){
-            Preconditions.checkUndefinedBehavior(   (Atom(Car(expr)).equals(nodeNIL)),
+            Preconditions.checkUndefinedBehavior(   (Atom(Car(expr)).equals(nodeF)),
                                                    "First element must be atomic element");
             ret = apply(    Car(expr),
                             evlist(Cdr(expr), aList),
@@ -299,13 +272,13 @@ public interface BuiltInFunctions extends ReservedName{
         TreeNode p = paramList;
         TreeNode a = actualParams;
         HashMap<String, TreeNode> newList = new HashMap<>(aList);
-        while(  !( p.equals(nodeNIL) || a.equals(nodeNIL) ) ){
+        while(  !( p.equals(nodeF) || a.equals(nodeF) ) ){
             newList.put(p.getLeft().getLexicalVal(), a.getLeft());
             p = p.getRight();
             a = a.getRight();
         }
         // param list and actual list must be of same length
-        Preconditions.checkUndefinedBehavior( !(p.equals(nodeNIL) && a.equals(nodeNIL)),
+        Preconditions.checkUndefinedBehavior( !(p.equals(nodeF) && a.equals(nodeF)),
                                             "Formals list have different length with Actual list");
         return newList;
     }
@@ -314,41 +287,41 @@ public interface BuiltInFunctions extends ReservedName{
     Evaluate the actual list into a list of atoms.
      */
 
-    default TreeNode evlist(TreeNode x, HashMap<String, TreeNode> aList)
-            throws ClassNotFoundException, NoSuchMethodException,
-            IllegalAccessException, InvocationTargetException {
-        if(x.equals(nodeNIL))
-            return nodeNIL;
-        return Cons(Eval(Car(x), aList), evlist(Cdr(x), aList));
-    }
+//    default TreeNode evlist(TreeNode x, HashMap<String, TreeNode> aList)
+//            throws ClassNotFoundException, NoSuchMethodException,
+//            IllegalAccessException, InvocationTargetException {
+//        if(x.equals(nodeF))
+//            return nodeF;
+//        return Cons(Eval(Car(x), aList), evlist(Cdr(x), aList));
+//    }
 
     /*
     Check if the parameters in the list of function declaration are unique
     and not same as reserved names.
      */
-    default void isUniqueAndValid(TreeNode param_list){
-        TreeNode tmp = param_list;
-        TreeNode p;
-        String name = null;
-        HashSet<String> nameSet = new HashSet<>();
-        while (! tmp.equals(nodeNIL)){
-            p = tmp.getLeft();
-            name = p.getLexicalVal();
-
-            Preconditions.checkUndefinedBehavior(
-                    !(p.isLeaf() && p.getTokenType() == TokenType.LITERAL_ATOM),
-                    "In parameter list, only Literal Atom is accepted");
-            Preconditions.checkUndefinedBehavior(
-                ReservedName.Function.contain(name) || ReservedName.Atom.contain(name),
-                "Parameter name must be different with reserved words.");
-            Preconditions.checkUndefinedBehavior(
-                        nameSet.contains(name),
-                    "Parameter name must be unique.");
-
-            nameSet.add(name);
-            tmp = tmp.getRight();
-        }
-    }
+//    default void isUniqueAndValid(TreeNode param_list){
+//        TreeNode tmp = param_list;
+//        TreeNode p;
+//        String name = null;
+//        HashSet<String> nameSet = new HashSet<>();
+//        while (! tmp.equals(nodeF)){
+//            p = tmp.getLeft();
+//            name = p.getLexicalVal();
+//
+//            Preconditions.checkUndefinedBehavior(
+//                    !(p.isLeaf() && p.getTokenType() == TokenType.LITERAL_ATOM),
+//                    "In parameter list, only Literal Atom is accepted");
+//            Preconditions.checkUndefinedBehavior(
+//                ReservedName.Function.contain(name) || ReservedName.Atom.contain(name),
+//                "Parameter name must be different with reserved words.");
+//            Preconditions.checkUndefinedBehavior(
+//                        nameSet.contains(name),
+//                    "Parameter name must be unique.");
+//
+//            nameSet.add(name);
+//            tmp = tmp.getRight();
+//        }
+//    }
 
     default TreeNode Car(TreeNode node)
             throws NullPointerException, UndefinedBehaviorException{
