@@ -1,5 +1,6 @@
 package functions;
 
+import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
 import util.*;
 
@@ -16,25 +17,50 @@ import static util.TreeUtil.*;
 public interface BuiltInFunctions extends ReservedName{
     HashMap<String, Pair<TreeNode>> dList = new HashMap<>(); // (FunctionName, (formallist, body))
 
+    default TypeSystem TypeChecking(TreeNode expr)
+            throws UndefinedBehaviorException, InvalidTypeException{
+        if (expr == null)
+            throw new NullPointerException("'null' can not be evaluated.");
 
-    default TreeNode Eval(TreeNode node, HashMap<String,TreeNode> aList)
+        TypeSystem ret = null;
+
+        // <editor-fold desc="node ::= Atom">
+        if(Atom(expr).equals(nodeT)){
+            if(expr.equals(nodeT) || ){  // evaluate to itself
+                ret = TypeSystem.BOOL;
+            }else if(expr.equals(nodeNIL){
+                ret = TypeSystem.LIST_NAT;
+            }
+            else if(expr.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
+                ret = expr;
+            }
+            else{
+                Preconditions.checkUndefinedBehavior(true, "Undefined Behavior for a single atom.");
+            }
+            return ret;
+        }
+        //</editor-fold>
+
+    }
+
+    default TreeNode Eval(TreeNode expr, HashMap<String,TreeNode> aList)
             throws UndefinedBehaviorException, ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, IllegalAccessException {
 
-        if (node == null)
+        if (expr == null)
             throw new NullPointerException("'null' can not be evaluated.");
 
         TreeNode ret = null;
 
         // <editor-fold desc="node ::= Atom">
-        if(Atom(node).equals(nodeT)){
-            if(node.equals(nodeT) || node.equals(nodeNIL)){  // evaluate to itself
-                ret = node;
+        if(Atom(expr).equals(nodeT)){
+            if(expr.equals(nodeT) || expr.equals(nodeNIL)){  // evaluate to itself
+                ret = expr;
             }
-            else if(node.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
-                ret = node;
-            }else if(node.getTokenType() == TokenType.LITERAL_ATOM){  // get from aList
-                String varName = node.getLexicalVal();
+            else if(expr.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
+                ret = expr;
+            }else if(expr.getTokenType() == TokenType.LITERAL_ATOM){  // get from aList
+                String varName = expr.getLexicalVal();
                 Preconditions.checkUndefinedBehavior(
                         ! aList.containsKey(varName),
                         "Variable has not been Declared/Init. " +
@@ -56,11 +82,11 @@ public interface BuiltInFunctions extends ReservedName{
         TreeNode s3;
         Class cl = TreeNode.class;
 
-        if(Car(node).getTokenType() != TokenType.LITERAL_ATOM)
+        if(Car(expr).getTokenType() != TokenType.LITERAL_ATOM)
             Preconditions.checkUndefinedBehavior(true,
-                    String.format("Function name must be a Literal Atom.", Car(node).getLexicalVal()));
+                    String.format("Function name must be a Literal Atom.", Car(expr).getLexicalVal()));
 
-        String functionName = Car(node).getLexicalVal();
+        String functionName = Car(expr).getLexicalVal();
         //<editor-fold desc="Arithmetic Operator - Binary - Numeric Atom Input">
         if(functionName.equals("PLUS")
                 || functionName.equals("MINUS")
@@ -69,12 +95,12 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("LESS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node));
-            s2 = Car(Cdr(Cdr(node)));
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
             s1 = Eval(s1, aList);  // recursively eval s1
             s2 = Eval(s2, aList); // recursively eval s2
             // Numeric Atoms after eval
@@ -88,12 +114,12 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("EQ")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node));
-            s2 = Car(Cdr(Cdr(node)));
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
             s1 = Eval(s1, aList);  // recursively eval s1
             s2 = Eval(s2, aList); // recursively eval s2
             Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT) && Atom(s2).equals(nodeT)),
@@ -110,11 +136,11 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("NULL")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node));
+            s1 = Car(Cdr(expr));
             s1 = Eval(s1, aList);  // recursively eval s1
 
 //            TODO evaluate the atom from aList
@@ -129,11 +155,11 @@ public interface BuiltInFunctions extends ReservedName{
                 || functionName.equals("CDR")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node));
+            s1 = Car(Cdr(expr));
             s1 = Eval(s1, aList);  // recursively eval s1
             Preconditions.checkUndefinedBehavior((Atom(s1).equals(nodeT)), "Must NOT be an Atom.");
 
@@ -146,12 +172,12 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("CONS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(node))).equals(nodeNIL), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node));
-            s2 = Car(Cdr(Cdr(node)));
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
             s1 = Eval(s1, aList);  // recursively eval s1
             s2 = Eval(s2, aList); // recursively eval s2
             // use reflection to call by function name
@@ -162,8 +188,8 @@ public interface BuiltInFunctions extends ReservedName{
         //<editor-fold desc="QUOTE  - List Input">
         else if(functionName.equals("QUOTE")){
             // Length == 2
-            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(node)).equals(nodeNIL), "Length != 2");
-            s1 = Car(Cdr(node));
+            Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
+            s1 = Car(Cdr(expr));
             // use reflection to call by function name
             ret = s1;
         }
@@ -171,8 +197,8 @@ public interface BuiltInFunctions extends ReservedName{
 
         //<editor-fold desc="COND - Using on demand evaluation">
         else if(functionName.equals("COND")){
-            Preconditions.checkUndefinedBehavior( Atom(Cdr(node)).equals(nodeT), "Length must be > 1");
-            TreeNode curNode = Cdr(node);
+            Preconditions.checkUndefinedBehavior( Atom(Cdr(expr)).equals(nodeT), "Length must be > 1");
+            TreeNode curNode = Cdr(expr);
             TreeNode s = null, b = null, e = null;
             while(! curNode.equals(nodeNIL)){
                 s = Car(curNode);
@@ -198,14 +224,14 @@ public interface BuiltInFunctions extends ReservedName{
         else if(functionName.equals("DEFUN")){
             // Length == 4
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(node)))).equals(nodeNIL),
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(Cdr(expr)))).equals(nodeNIL),
                                                 "Function Declaration List Length != 4");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
-            s1 = Car(Cdr(node)); // user-defined function name, must be literal atom
-            s2 = Car(Cdr(Cdr(node))); // formals list
-            s3 = Car(Cdr(Cdr(Cdr(node)))); // body
+            s1 = Car(Cdr(expr)); // user-defined function name, must be literal atom
+            s2 = Car(Cdr(Cdr(expr))); // formals list
+            s3 = Car(Cdr(Cdr(Cdr(expr)))); // body
             // check preconditions
             Preconditions.checkUndefinedBehavior(
                     Atom(s1).equals(nodeNIL),
@@ -230,10 +256,10 @@ public interface BuiltInFunctions extends ReservedName{
 
         //<editor-fold desc="user-defined Function Call">
         else if(dList.containsKey(functionName)){
-            Preconditions.checkUndefinedBehavior(   (Atom(Car(node)).equals(nodeNIL)),
+            Preconditions.checkUndefinedBehavior(   (Atom(Car(expr)).equals(nodeNIL)),
                                                    "First element must be atomic element");
-            ret = apply(    Car(node),
-                            evlist(Cdr(node), aList),
+            ret = apply(    Car(expr),
+                            evlist(Cdr(expr), aList),
                             aList );
         }
         //</editor-fold>

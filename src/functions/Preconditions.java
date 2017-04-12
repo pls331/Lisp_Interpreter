@@ -1,6 +1,8 @@
 package functions;
 
+import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
+import util.TypeSystem;
 
 /**
  * Created by lenovo1 on 2017/2/7.
@@ -20,4 +22,10 @@ public class Preconditions {
             }
     }
 
+    public static void checkType(TypeSystem expectedType, TypeSystem inferredType, String msg)
+            throws InvalidTypeException {
+        if (!expectedType.equals(inferredType)) {
+            throw new InvalidTypeException("InvalidType" + msg);
+        }
+    }
 }

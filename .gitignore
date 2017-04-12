@@ -3,4 +3,9 @@
 .classpath
 *.project
 .settings/org.eclipse.jdt.core.prefs
-.idea/workspace.xml
+.idea/workspace.xml.clover
+.clover
+
+.clover
+.clover/coverage.db
+*.db
