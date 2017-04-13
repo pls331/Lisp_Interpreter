@@ -5,6 +5,28 @@ import java.nio.charset.Charset
  */
 class TypeCheckerTest extends GroovyTestCase {
 
+    void testInvalid() {
+        // evaluate valid input
+        InputStream is = null;
+        is = new FileInputStream(new File("InvalidTestCase.txt"));
+        System.setIn(is);
+
+        TypeChecker typeChecker = new TypeChecker(System.in);
+        typeChecker.parse( false ); // Project 2 output
+        typeChecker.eval(false, true);
+        println "####### Invalid Test Case #######"
+        ArrayList<String> msgList = typeChecker.getExceptionMsgList()
+        ArrayList<String> ansList = getAnswers("InvalidTestAnswer.txt")
+//        assertSame(msgList.size(), ansList.size())
+        for(int i = 0; i < msgList.size(); i++){
+            println String.format("%-4d | %s", i+1, msgList.get(i))
+//            println String.format("%s", msgList.get(i))
+            println String.format("%-4d | %s", i+1, ansList.get(i))
+            assertTrue(msgList.get(i) == ansList.get(i))
+        }
+    }
+
+
     void testValid(){
         // evaluate valid input
         InputStream is = null;
@@ -13,7 +35,7 @@ class TypeCheckerTest extends GroovyTestCase {
 
         TypeChecker typeChecker = new TypeChecker(System.in);
         typeChecker.parse( false ); // Project 2 output
-        typeChecker.eval(false, true);
+        typeChecker.eval(true, false);
         ArrayList<String> resList = typeChecker.getResult();
         ArrayList<String> ansList = getAnswers("ValidAnswer.txt");
         assert(resList.size() == ansList.size())

@@ -3,17 +3,22 @@
   <component name="ChangeListManager">
     <list id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="Learn about commit." />
     <list default="true" id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="Output format confirmed.&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/InvalidTestCase.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/exception/EmptyListException.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/InvalidTestCase" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Interpreter_pan692.iml" afterPath="$PROJECT_DIR$/.idea/Interpreter_pan692.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvalidTestAnswer.txt" afterPath="$PROJECT_DIR$/InvalidTestAnswer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidAnswer.txt" afterPath="$PROJECT_DIR$/ValidAnswer.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidTestCase.txt" afterPath="$PROJECT_DIR$/ValidTestCase.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interpreter.java" afterPath="$PROJECT_DIR$/src/Interpreter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TypeChecker.java" afterPath="$PROJECT_DIR$/src/TypeChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" afterPath="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/Preconditions.java" afterPath="$PROJECT_DIR$/src/functions/Preconditions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/StaticChecker.java" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TypeSystem.java" afterPath="$PROJECT_DIR$/src/util/TypeSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" afterPath="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/Pair.java" afterPath="$PROJECT_DIR$/src/util/Pair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/InterpreterTest.groovy" afterPath="$PROJECT_DIR$/test/InterpreterTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +41,7 @@
     <coveredHighlight>-16756736</coveredHighlight>
     <outOfDateStripe>-256</outOfDateStripe>
     <includes null="true" />
-    <excludes null="true" />
+    <excludes>Interpreter.java, functions/BuiltInFunctions.java</excludes>
     <alwaysExpandTestClasses>false</alwaysExpandTestClasses>
     <autoViewInCloudReport>true</autoViewInCloudReport>
     <filteredHighlight>-11513776</filteredHighlight>
@@ -70,7 +75,7 @@
     <buildWithClover>true</buildWithClover>
     <lastProjectConfigTabSelected>0</lastProjectConfigTabSelected>
     <contextFilterSpec />
-    <span>0</span>
+    <span>0 days</span>
     <instrumentTests>true</instrumentTests>
     <projectRebuild class="com.atlassian.clover.idea.config.ProjectRebuild">ASK</projectRebuild>
     <showSummaryInToolbar>true</showSummaryInToolbar>
@@ -99,18 +104,38 @@
     <favorites_list name="Interpreter_pan692" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="97" column="88" lean-forward="false" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.78407764">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Parser.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="242">
+                  <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="InvalidTestAnswer.txt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="855">
+                  <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -123,12 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>expre</find>
-      <find>getCu</find>
-      <find>System.</find>
-      <find>equa</find>
-      <find>Cdr</find>
-      <find>NOT Numeric Atom</find>
       <find>ERROR</find>
       <find>aList</find>
       <find>evlist</find>
@@ -148,16 +167,24 @@
       <find>CAR</find>
       <find>Atom</find>
       <find>EQ</find>
-      <find>NULL</find>
       <find>ATOM</find>
       <find>INT</find>
       <find>Interpre</find>
       <find>MINUS</find>
+      <find>assert</find>
+      <find>NULL</find>
+      <find>nodeF</find>
+      <find>ength</find>
+      <find>for a si</find>
+      <find>CONS</find>
+      <find>Cannot be atom</find>
     </findStrings>
     <replaceStrings>
       <replace>nodeT</replace>
       <replace>nodeF</replace>
       <replace>PLUS</replace>
+      <replace>nodeNIL</replace>
+      <replace>nodeNIL`</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,8 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/LexicalScannerTest.java" />
-        <option value="$PROJECT_DIR$/src/functions/OneParamFunction.java" />
         <option value="$PROJECT_DIR$/src/Util/Preconditions.java" />
         <option value="$PROJECT_DIR$/src/Exception/UndefinedBehaviorException.java" />
         <option value="$PROJECT_DIR$/src/exception/UndefinedBehaviorException.java" />
@@ -197,7 +222,6 @@
         <option value="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
         <option value="$PROJECT_DIR$/test/util/TokenTest.groovy" />
         <option value="$PROJECT_DIR$/ParserTest.txt" />
-        <option value="$PROJECT_DIR$/src/util/Pair.java" />
         <option value="$PROJECT_DIR$/test/util/PairTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/functions/BuiltInFunctionNames.java" />
@@ -210,23 +234,26 @@
         <option value="$PROJECT_DIR$/src/LexicalScanner.java" />
         <option value="$PROJECT_DIR$/EvaluateTest.txt" />
         <option value="$PROJECT_DIR$/ValidAnswer" />
-        <option value="$PROJECT_DIR$/ValidAnswer.txt" />
-        <option value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
-        <option value="$PROJECT_DIR$/InvalidTestCase" />
-        <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
         <option value="$PROJECT_DIR$/src/exception/InvalidTypeException.java" />
         <option value="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
-        <option value="$PROJECT_DIR$/src/functions/Preconditions.java" />
         <option value="$PROJECT_DIR$/src/util/TypeSystem.java" />
         <option value="$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
-        <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
         <option value="$PROJECT_DIR$/src/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/TypeChecker.java" />
+        <option value="$PROJECT_DIR$/InvalidTestCase" />
+        <option value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
+        <option value="$PROJECT_DIR$/src/exception/EmptyListException.java" />
+        <option value="$PROJECT_DIR$/src/functions/Preconditions.java" />
         <option value="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
+        <option value="$PROJECT_DIR$/src/util/Pair.java" />
+        <option value="$PROJECT_DIR$/src/TypeChecker.java" />
         <option value="$PROJECT_DIR$/ValidTestCase.txt" />
+        <option value="$PROJECT_DIR$/ValidAnswer.txt" />
+        <option value="$PROJECT_DIR$/InvalidTestCase.txt" />
+        <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
+        <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
       </list>
     </option>
   </component>
@@ -364,24 +391,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="util">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Interpreter_pan692">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="test">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="functions">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -461,11 +470,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.excludes" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="SearchEverywhereHistoryKey" value="Eval&#9;PSI&#9;JAVA://functions.BuiltInFunctions#Eval&#10;show in ex&#9;ACTION&#9;RevealIn&#10;open &#9;ACTION&#9;OpenInBrowserEditorContextBarGroupAction&#10;todo&#9;ACTION&#9;ActivateTODOToolWindow" />
@@ -480,6 +489,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exception" />
       <recent name="functions" />
       <recent name="" />
     </key>
@@ -487,34 +497,7 @@
       <recent name="Exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InterpreterTest.testValid">
-    <configuration default="false" name="InterpreterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Interpreter_pan692" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InterpreterTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Clover Optimizing Runner IDEA 13+">
-        <option name="discardSnapshots" value="false" />
-        <option name="compilesBeforeStaleSnapshot" value="10" />
-        <option name="minimize" value="true" />
-        <option name="reorder" value="FAILFAST" />
-      </RunnerSettings>
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.TypeCheckerTest.testInvalid">
     <configuration default="false" name="InterpreterTest.testInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Interpreter_pan692" />
@@ -563,18 +546,13 @@
       </RunnerSettings>
       <method />
     </configuration>
-    <configuration default="false" name="TreeNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="TypeCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Interpreter_pan692" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.TreeNodeTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TypeCheckerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -587,21 +565,43 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Clover Optimizing Runner IDEA 13+">
+        <option name="discardSnapshots" value="false" />
+        <option name="compilesBeforeStaleSnapshot" value="10" />
+        <option name="minimize" value="true" />
+        <option name="reorder" value="FAILFAST" />
+      </RunnerSettings>
       <method />
     </configuration>
-    <configuration default="false" name="TypeSystemTest.testTypeCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="TypeCheckerTest.testValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Interpreter_pan692" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.TypeSystemTest" />
-      <option name="METHOD_NAME" value="testTypeCreation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TypeCheckerTest" />
+      <option name="METHOD_NAME" value="testValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TypeCheckerTest.testInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Interpreter_pan692" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TypeCheckerTest" />
+      <option name="METHOD_NAME" value="testInvalid" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -835,19 +835,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.InterpreterTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TreeNodeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TypeSystemTest.testTypeCreation" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeSystemTest.testTypeCreation" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.InterpreterTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TreeNodeTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
       </list>
     </recent_temporary>
   </component>
@@ -942,35 +942,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 35m 35s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 00s.xml">
+      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 36m 08s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 27s.xml">
+      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 36m 25s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 34s.xml">
+      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 36m 44s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 49m 11s.xml">
+      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 37m 19s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 34m 45s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.03.27 at 21h 37m 32s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 39m 54s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testInvalid - 2017.04.12 at 16h 33m 16s.xml">
-      <configuration name="InterpreterTest.testInvalid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 42m 48s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InterpreterTest_testValid - 2017.04.12 at 16h 33m 28s.xml">
-      <configuration name="InterpreterTest.testValid" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 44m 49s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeSystemTest_testTypeCreation - 2017.04.12 at 15h 56m 32s.xml">
-      <configuration name="TypeSystemTest.testTypeCreation" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 45m 57s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeSystemTest_testTypeCreation - 2017.04.12 at 16h 09m 32s.xml">
-      <configuration name="TypeSystemTest.testTypeCreation" configurationId="JUnit" />
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 47m 50s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -987,36 +987,36 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33944446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5032113" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.365" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1953125" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.4967887" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17597945" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22768144" sideWeight="0.5125448" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898352" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33997253" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4468814" sideWeight="0.5044958" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1078,7 +1078,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/functions/CONS.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/INT.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/ATOM.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileOutputStream.java">
@@ -1199,47 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="105" column="1" lean-forward="false" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/functions/BuiltInFunctionsTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="22" column="71" lean-forward="false" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvalidTestCase">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#366#367#0" expanded="false" />
-            <element signature="e#453#454#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/TokenType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1275,6 +1233,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,24 +1268,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
+    <entry file="file://$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/LexicalScannerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1492041347741" expanded="false" signature="27:127" ph="..." />
-            <marker date="1492041347741" expanded="true" signature="129:171" ph="/**...*/" />
-            <marker date="1492041347741" expanded="true" signature="250:360" ph="{...}" />
-            <marker date="1492041347741" expanded="true" signature="475:598" ph="{...}" />
-            <marker date="1492041347741" expanded="true" signature="735:870" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="7:39" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="41:84" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="166:2947" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="176:213" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="367:535" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="673:721" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="869:987" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="2705:2811" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/functions/BuiltInFunctionsTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <marker date="1489524604604" expanded="false" signature="26:144" ph="..." />
+            <marker date="1489524604604" expanded="true" signature="145:188" ph="/**...*/" />
+            <marker date="1489524604604" expanded="true" signature="231:235" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="287:7675" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="309:2921" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="319:516" ph="/*...*/" />
+            <marker date="1489524604604" expanded="true" signature="2950:5595" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="2960:3136" ph="/*...*/" />
+            <marker date="1489524604604" expanded="true" signature="5620:7030" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="6299:6313" ph="{" />
+            <marker date="1489524604604" expanded="true" signature="6334:6344" ph="}" />
+            <marker date="1489524604604" expanded="true" signature="6363:6511" ph="{...}" />
+            <marker date="1489524604604" expanded="true" signature="7063:7673" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/TypeSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="405">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="23" />
           <folding>
             <marker date="1492041347709" expanded="true" signature="15:58" ph="/**...*/" />
             <marker date="1492041347709" expanded="false" signature="227:238" ph=" { " />
@@ -1339,26 +1331,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="267" column="10" lean-forward="false" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
+        <state relative-caret-position="691">
+          <caret line="111" column="82" lean-forward="false" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="82" />
           <folding>
             <marker date="1492042407079" expanded="false" signature="27:249" ph="..." />
             <marker date="1492042407079" expanded="true" signature="251:293" ph="/**...*/" />
@@ -1396,160 +1372,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+        <state relative-caret-position="380">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding>
-            <marker date="1492042407010" expanded="false" signature="27:184" ph="..." />
-            <marker date="1492042407010" expanded="true" signature="186:228" ph="/**...*/" />
-            <marker date="1492042407010" expanded="true" signature="397:11322" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="542:1173" ph="node ::= Atom" />
-            <marker date="1492042407010" expanded="true" signature="11446:11778" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="11780:13222" ph="//..." />
-            <marker date="1492042407010" expanded="false" signature="13291:13632" ph="//..." />
-            <marker date="1492042407010" expanded="false" signature="13760:14727" ph="//..." />
-            <marker date="1492042407010" expanded="true" signature="14836:15020" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="15129:15313" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="15440:15668" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="15778:15931" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="16041:16251" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="16361:16552" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="16677:17077" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="17204:17860" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="17988:18645" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="18773:19430" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="19558:20207" ph="{...}" />
-            <marker date="1492042407010" expanded="true" signature="20337:20986" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <marker date="1492042406995" expanded="false" signature="7:128" ph="..." />
-            <marker date="1492042406995" expanded="true" signature="253:559" ph="{...}" />
-            <marker date="1492042406995" expanded="true" signature="620:1088" ph="{...}" />
-            <marker date="1492042406995" expanded="true" signature="828:1067" ph="//..." />
-            <marker date="1492042406995" expanded="true" signature="1092:1145" ph="/**...*/" />
-            <marker date="1492042406995" expanded="false" signature="1179:1183" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1222:1225" ph=" }" />
-            <marker date="1492042406995" expanded="true" signature="1285:1381" ph="/**...*/" />
-            <marker date="1492042406995" expanded="false" signature="1415:1419" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1453:1456" ph=" }" />
-            <marker date="1492042406995" expanded="false" signature="1493:1503" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1535:1538" ph=" }" />
-            <marker date="1492042406995" expanded="false" signature="1593:1607" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1644:1650" ph=" }" />
-            <marker date="1492042406995" expanded="true" signature="1692:1856" ph="{...}" />
-            <marker date="1492042406995" expanded="false" signature="1905:1909" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1965:1968" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/LexicalScannerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1487387376253" expanded="true" signature="7:39" ph="..." />
-            <marker date="1487387376253" expanded="true" signature="41:84" ph="/**...*/" />
-            <marker date="1487387376253" expanded="true" signature="166:2947" ph="{...}" />
-            <marker date="1487387376253" expanded="true" signature="176:213" ph="/**...*/" />
-            <marker date="1487387376253" expanded="true" signature="367:535" ph="..." />
-            <marker date="1487387376253" expanded="true" signature="673:721" ph="..." />
-            <marker date="1487387376253" expanded="true" signature="869:987" ph="{...}" />
-            <marker date="1487387376253" expanded="true" signature="2705:2811" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
-          <folding>
-            <marker date="1492042407064" expanded="false" signature="7:237" ph="..." />
-            <marker date="1492042407064" expanded="true" signature="252:281" ph="/**...*/" />
-            <marker date="1492042407064" expanded="true" signature="380:523" ph="/**...*/" />
-            <marker date="1492042407064" expanded="true" signature="707:913" ph="{...}" />
-            <marker date="1492042407064" expanded="false" signature="947:951" ph=" { " />
-            <marker date="1492042407064" expanded="false" signature="973:976" ph=" }" />
-            <marker date="1492042407064" expanded="true" signature="1047:1668" ph="{...}" />
-            <marker date="1492042407064" expanded="true" signature="1739:2969" ph="{...}" />
-            <marker date="1492042407064" expanded="true" signature="1970:2010" ph="//..." />
-            <marker date="1492042407064" expanded="true" signature="3006:4486" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TypeChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding>
-            <marker date="1492042407032" expanded="false" signature="7:128" ph="..." />
-            <marker date="1492042407032" expanded="true" signature="252:558" ph="{...}" />
-            <marker date="1492042407032" expanded="true" signature="619:781" ph="{...}" />
-            <marker date="1492042407032" expanded="true" signature="785:838" ph="/**...*/" />
-            <marker date="1492042407032" expanded="false" signature="872:876" ph=" { " />
-            <marker date="1492042407032" expanded="false" signature="915:918" ph=" }" />
-            <marker date="1492042407032" expanded="true" signature="978:1074" ph="/**...*/" />
-            <marker date="1492042407032" expanded="false" signature="1108:1112" ph=" { " />
-            <marker date="1492042407032" expanded="false" signature="1146:1149" ph=" }" />
-            <marker date="1492042407032" expanded="false" signature="1186:1196" ph=" { " />
-            <marker date="1492042407032" expanded="false" signature="1228:1231" ph=" }" />
-            <marker date="1492042407032" expanded="true" signature="1286:1300" ph=" { " />
-            <marker date="1492042407032" expanded="true" signature="1337:1343" ph=" }" />
-            <marker date="1492042407032" expanded="true" signature="1385:1549" ph="{...}" />
-            <marker date="1492042407032" expanded="false" signature="1598:1602" ph=" { " />
-            <marker date="1492042407032" expanded="false" signature="1658:1661" ph=" }" />
+            <marker date="1492031264081" expanded="true" signature="358:542" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="632:888" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="980:1127" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="1235:1623" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="1681:1848" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="1929:2378" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="2437:2612" ph="{...}" />
+            <marker date="1492031264081" expanded="true" signature="2694:3294" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/InterpreterTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="55" column="5" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <marker date="1490664931371" expanded="true" signature="32:75" ph="/**...*/" />
-            <marker date="1490664931371" expanded="true" signature="147:953" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="743:947" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="976:1827" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="1652:1820" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="1885:2284" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="2212:2226" ph="{" />
-            <marker date="1490664931371" expanded="true" signature="2212:2254" ph="{...}" />
-            <marker date="1490664931371" expanded="true" signature="2244:2254" ph="}" />
+            <marker date="1492048103686" expanded="true" signature="32:75" ph="/**...*/" />
+            <marker date="1492048103686" expanded="true" signature="147:954" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="744:948" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="977:1828" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="1653:1821" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="1886:2285" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="2213:2227" ph="{" />
+            <marker date="1492048103686" expanded="true" signature="2213:2255" ph="{...}" />
+            <marker date="1492048103686" expanded="true" signature="2245:2255" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding>
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1649#1650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/EmptyListException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <marker date="1492051833290" expanded="true" signature="20:63" ph="/**...*/" />
+            <marker date="1492051833290" expanded="true" signature="157:172" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <marker date="1492054300867" expanded="true" signature="15:58" ph="/**...*/" />
+            <marker date="1492054300867" expanded="true" signature="169:234" ph="{...}" />
+            <marker date="1492054300867" expanded="true" signature="260:282" ph="{...}" />
+            <marker date="1492054300867" expanded="true" signature="309:332" ph="{...}" />
+            <marker date="1492054300867" expanded="false" signature="376:387" ph=" { " />
+            <marker date="1492054300867" expanded="false" signature="457:463" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TypeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <marker date="1492054367945" expanded="false" signature="7:126" ph="..." />
+            <marker date="1492054367945" expanded="true" signature="250:556" ph="{...}" />
+            <marker date="1492054367945" expanded="true" signature="617:778" ph="{...}" />
+            <marker date="1492054367945" expanded="true" signature="782:835" ph="/**...*/" />
+            <marker date="1492054367945" expanded="false" signature="869:873" ph=" { " />
+            <marker date="1492054367945" expanded="false" signature="912:915" ph=" }" />
+            <marker date="1492054367945" expanded="true" signature="975:1071" ph="/**...*/" />
+            <marker date="1492054367945" expanded="false" signature="1105:1109" ph=" { " />
+            <marker date="1492054367945" expanded="false" signature="1143:1146" ph=" }" />
+            <marker date="1492054367945" expanded="false" signature="1183:1193" ph=" { " />
+            <marker date="1492054367945" expanded="false" signature="1225:1228" ph=" }" />
+            <marker date="1492054367945" expanded="false" signature="1283:1297" ph=" { " />
+            <marker date="1492054367945" expanded="false" signature="1334:1340" ph=" }" />
+            <marker date="1492054367945" expanded="true" signature="1382:1548" ph="{...}" />
+            <marker date="1492054367945" expanded="false" signature="1597:1601" ph=" { " />
+            <marker date="1492054367945" expanded="false" signature="1657:1660" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1492051833258" expanded="false" signature="27:164" ph="..." />
+            <marker date="1492051833258" expanded="true" signature="166:208" ph="/**...*/" />
+            <marker date="1492051833258" expanded="true" signature="287:397" ph="{...}" />
+            <marker date="1492051833258" expanded="true" signature="512:635" ph="{...}" />
+            <marker date="1492051833258" expanded="true" signature="772:907" ph="{...}" />
+            <marker date="1492051833258" expanded="true" signature="1024:1125" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="650">
+          <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
           <folding>
-            <marker date="1492042407048" expanded="false" signature="33:76" ph="/**...*/" />
-            <marker date="1492042407048" expanded="true" signature="145:995" ph="{...}" />
-            <marker date="1492042407048" expanded="true" signature="821:989" ph="{...}" />
-            <marker date="1492042407048" expanded="true" signature="1053:1452" ph="{...}" />
-            <marker date="1492042407048" expanded="true" signature="1380:1394" ph="{" />
-            <marker date="1492042407048" expanded="true" signature="1380:1422" ph="{...}" />
-            <marker date="1492042407048" expanded="true" signature="1412:1422" ph="}" />
+            <marker date="1492049778335" expanded="false" signature="33:76" ph="/**...*/" />
+            <marker date="1492049778335" expanded="true" signature="148:1026" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="758:1020" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="1049:1899" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="1725:1893" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="1957:2356" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="2284:2298" ph="{" />
+            <marker date="1492049778335" expanded="true" signature="2284:2326" ph="{...}" />
+            <marker date="1492049778335" expanded="true" signature="2316:2326" ph="}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InvalidTestCase.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="97" column="88" lean-forward="false" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="88" />
+        <state relative-caret-position="225">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="965">
+          <caret line="75" column="59" lean-forward="false" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+          <folding>
+            <marker date="1492055266141" expanded="false" signature="27:221" ph="..." />
+            <marker date="1492055266141" expanded="true" signature="223:265" ph="/**...*/" />
+            <marker date="1492055266141" expanded="true" signature="453:5997" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="535:1211" ph="node ::= Atom" />
+            <marker date="1492055266141" expanded="true" signature="6114:17148" ph="{...}" />
+            <marker date="1492055266141" expanded="false" signature="6259:6890" ph="node ::= Atom" />
+            <marker date="1492055266141" expanded="true" signature="17272:17604" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="17606:19048" ph="//..." />
+            <marker date="1492055266141" expanded="false" signature="19117:19458" ph="//..." />
+            <marker date="1492055266141" expanded="false" signature="19586:20553" ph="//..." />
+            <marker date="1492055266141" expanded="true" signature="20662:20846" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="20955:21139" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="21266:21494" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="21604:21757" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="21867:22077" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="22187:22378" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="22503:22903" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="23030:23686" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="23814:24471" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="24599:25256" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="25384:26033" ph="{...}" />
+            <marker date="1492055266141" expanded="true" signature="26163:26812" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1612,6 +1633,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,5 +1,6 @@
 package functions;
 
+import exception.EmptyListException;
 import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
 import util.TypeSystem;
@@ -26,6 +27,13 @@ public class Preconditions {
             throws InvalidTypeException {
         if (!inferredType.isOfType(expectedType)) {
             throw new InvalidTypeException("TYPE ERROR: " + msg);
+        }
+    }
+
+    public static void checkEmptyList(int minLen,int inferedLen, String msg)
+            throws EmptyListException {
+        if(!(inferedLen >= minLen)){
+            throw new EmptyListException(msg);
         }
     }
 }

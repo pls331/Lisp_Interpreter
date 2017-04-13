@@ -3,9 +3,7 @@ import exception.UndefinedBehaviorException;
 import functions.StaticChecker;
 import util.*;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * 
@@ -25,7 +23,7 @@ public class Parser implements StaticChecker{
 	 */
 	private LexicalScanner scn;
 	private ArrayList<TreeNode> rootList;
-	public ArrayList<TypeSystem> resultList;
+	public ArrayList<Pair<TypeSystem, Integer>> resultList;
 	public ArrayList<String> exMsgList;
 
 	public Parser(LexicalScanner scn) {
@@ -65,19 +63,22 @@ public class Parser implements StaticChecker{
 	}
 
 
-	public ArrayList<TreeNode> eval(boolean isPrint, boolean isTesting){
+	public ArrayList<Pair<TypeSystem, Integer>> eval(boolean isPrint, boolean isTesting){
 		boolean isExceptionCaught = false;
 		for (TreeNode node : this.rootList){
 			try{
 				isExceptionCaught = false;
+				System.out.println(TreeUtil.getListNotation(node));
+				System.out.flush();
 				// static type checking
 				TypeSystem evalType = this.evalType(node);
-				this.resultList.add(evalType);
 				// static empty list checking
-				//TODO
-
-				if(isPrint)
-					System.out.println(TreeUtil.getListNotation(node));
+				Pair<TypeSystem, Integer> evalPair = this.evalEmptyList(node);
+				System.out.println(String.format("%s, %s", evalType, evalPair));
+				assert evalType == evalPair.getFirst();
+				this.resultList.add(new Pair<>(evalType, evalPair.getSecond()));
+//				if(isPrint)
+//					System.out.println(TreeUtil.getListNotation(node));
 			}catch (InvalidTypeException ite){
 				if(!isTesting) System.out.println(String.format(ite.getMessage()));
 				exMsgList.add(ite.getMessage());
@@ -85,12 +86,12 @@ public class Parser implements StaticChecker{
 //				ite.printStackTrace();
 			}
 			catch (UndefinedBehaviorException udbe){
-				if(!isTesting) System.out.println(String.format("ERROR: %s", udbe.getMessage()));
+				if(!isTesting) System.out.println(String.format("TYPE ERROR: %s", udbe.getMessage()));
 				exMsgList.add(udbe.getMessage());
 				isExceptionCaught = true;
 //				udbe.printStackTrace();
 			}catch (NullPointerException npe){
-				if(!isTesting) System.out.println(String.format("ERROR: %s", npe.getMessage()));
+				if(!isTesting) System.out.println(String.format("TYPE ERROR: %s", npe.getMessage()));
 				exMsgList.add(npe.getMessage());
 				isExceptionCaught = true;
 //				npe.printStackTrace();
@@ -99,6 +100,8 @@ public class Parser implements StaticChecker{
 				isExceptionCaught = true;
 //				e.printStackTrace();
 			}finally {
+				System.out.flush();
+				System.err.flush();
 				if(isExceptionCaught && ! isTesting) System.exit(-2);
 			}
 

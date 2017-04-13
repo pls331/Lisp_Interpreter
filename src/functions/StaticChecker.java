@@ -1,5 +1,6 @@
 package functions;
 
+import exception.EmptyListException;
 import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
 import util.*;
@@ -12,6 +13,138 @@ import static util.TreeUtil.*;
  * Created by lenovo1 on 2017/2/7.
  */
 public interface StaticChecker extends ReservedName{
+
+    default Pair<TypeSystem, Integer> evalEmptyList(TreeNode expr)
+            throws UndefinedBehaviorException, EmptyListException {
+        Pair<TypeSystem, Integer> ret = null;  // <TypeSystem, Length>
+
+        // <editor-fold desc="node ::= Atom">
+        if(Atom(expr).equals(nodeT)){
+            if(expr.equals(nodeT) || expr.equals(nodeF)){  // evaluate to itself
+                ret = new Pair<>(TypeSystem.BOOL, 0);
+            }else if(expr.equals(nodeNIL)){
+                ret = new Pair<>(TypeSystem.LIST_NAT, 0);
+            }
+            else if(expr.getTokenType() == TokenType.NUMERIC_ATOM){  // evaluate to itself
+                ret = new Pair<>(TypeSystem.NAT, 0);
+            }
+            else{
+                Preconditions.checkUndefinedBehavior(true, "Undefined Behavior for a single atom.");
+            }
+            return ret;
+        }
+        //</editor-fold>
+
+
+
+        // <editor-fold desc="node ::= apply a Function">
+        TreeNode s1;
+        TreeNode s2;
+        TreeNode s3;
+        int min_len;
+        Pair<TypeSystem, Integer> tmp_pair;
+        Class cl = TreeNode.class;
+
+        String functionName = Car(expr).getLexicalVal();
+
+        if (functionName.equals("CAR")){
+            s1 = Car(Cdr(expr));
+            min_len = 1;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.NAT, 0);
+        }
+
+        else if(functionName.equals("CDR")){
+            s1 = Car(Cdr(expr));
+            min_len = 1;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.LIST_NAT, inferred1.getSecond() - 1);
+        }
+
+        else if(functionName.equals("CONS")){
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
+            min_len = 0;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Pair<TypeSystem, Integer> inferred2 = evalEmptyList(s2);  // recursively check s2
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.LIST_NAT, inferred2.getSecond() + 1);
+        }
+
+        else if(functionName.equals("NULL") ||
+                functionName.equals("ATOM") ||
+                functionName.equals("INT")){
+            s1 = Car(Cdr(expr));
+            min_len = 0;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.BOOL, 0);
+        }
+
+        else if(functionName.equals("EQ")){
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
+            min_len = 0;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Pair<TypeSystem, Integer> inferred2 = evalEmptyList(s2);  // recursively check s2
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.BOOL, 0);
+        }
+
+
+        else if(functionName.equals("PLUS")){
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
+            min_len = 0;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Pair<TypeSystem, Integer> inferred2 = evalEmptyList(s2);  // recursively check s2
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.NAT, 0);
+        }
+
+        else if(functionName.equals("LESS")){
+            s1 = Car(Cdr(expr));
+            s2 = Car(Cdr(Cdr(expr)));
+            min_len = 0;
+            Pair<TypeSystem, Integer> inferred1 = evalEmptyList(s1);  // recursively check s1
+            Pair<TypeSystem, Integer> inferred2 = evalEmptyList(s2);  // recursively check s2
+            Preconditions.checkEmptyList(min_len, inferred1.getSecond(),
+                    String.format("In %s, List must be longer than %s .", functionName, min_len));
+            ret = new Pair<>(TypeSystem.BOOL, 0);
+        }
+
+        else if(functionName.equals("COND")){
+            TreeNode curNode = Cdr(expr);
+            TreeNode s, b, e;
+            int min_inferred_len = Integer.MAX_VALUE;
+            Pair<TypeSystem, Integer> infered_e = null;
+            while(! curNode.equals(nodeNIL)){
+                s = Car(curNode);
+                b = Car(s);
+                e = Car(Cdr(s));
+                infered_e = this.evalEmptyList(e);
+                min_inferred_len = Math.min(min_inferred_len, infered_e.getSecond());
+                curNode = Cdr(curNode);
+            }
+            ret = new Pair<>(infered_e.getFirst(), min_inferred_len);
+            assert ret != null;
+        }
+
+        else{
+            Preconditions.checkUndefinedBehavior(true, "undefined function "+ functionName );
+        }
+
+        return ret;
+    }
+
 
     default TypeSystem evalType(TreeNode expr)
             throws UndefinedBehaviorException, InvalidTypeException{
@@ -56,7 +189,7 @@ public interface StaticChecker extends ReservedName{
         if (functionName.equals("CAR")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -71,7 +204,7 @@ public interface StaticChecker extends ReservedName{
         else if(functionName.equals("CDR")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -86,7 +219,7 @@ public interface StaticChecker extends ReservedName{
         else if(functionName.equals("CONS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -96,17 +229,17 @@ public interface StaticChecker extends ReservedName{
             inferredType2 = evalType(s2); // recursively eval s2
             expectedType1 = TypeSystem.NAT;
             Preconditions.checkType(expectedType1, inferredType1,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType1));
+                    String.format("Input to %s 1st param must be of type %s.", functionName, expectedType1));
             expectedType2 = TypeSystem.LIST_NAT;
             Preconditions.checkType(expectedType2, inferredType2,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType2));
+                    String.format("Input to %s 2nd param must be of type %s.", functionName, expectedType2));
             ret = TypeSystem.LIST_NAT;
         }
 
         else if(functionName.equals("ATOM")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -121,7 +254,7 @@ public interface StaticChecker extends ReservedName{
         else if(functionName.equals("EQ")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -131,17 +264,17 @@ public interface StaticChecker extends ReservedName{
             inferredType2 = evalType(s2); // recursively eval s2
             expectedType1 = TypeSystem.NAT;
             Preconditions.checkType(expectedType1, inferredType1,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType1));
+                    String.format("Input to %s's 1st param must be of type %s.", functionName, expectedType1));
             expectedType2 = TypeSystem.NAT;
             Preconditions.checkType(expectedType2, inferredType2,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType2));
+                    String.format("Input to %s's 2nd param must be of type %s.", functionName, expectedType2));
             ret = TypeSystem.BOOL;
         }
 
         else if(functionName.equals("NULL")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -156,7 +289,7 @@ public interface StaticChecker extends ReservedName{
         else if(functionName.equals("INT")){
             // Length == 2
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeF), "Length != 2");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -171,7 +304,7 @@ public interface StaticChecker extends ReservedName{
         else if(functionName.equals("PLUS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -182,17 +315,17 @@ public interface StaticChecker extends ReservedName{
 
             expectedType1 = TypeSystem.NAT;
             Preconditions.checkType(expectedType1, inferredType1,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType1));
+                    String.format("Input to %s's 1st param must be of type %s.", functionName, expectedType1));
             expectedType2 = TypeSystem.NAT;
             Preconditions.checkType(expectedType2, inferredType2,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType2));
+                    String.format("Input to %s's 2nd param must be of type %s.", functionName, expectedType2));
             ret = TypeSystem.NAT;
         }
 
         else if(functionName.equals("LESS")){
             // Length == 3
             try{
-                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeF), "Length != 3");
+                Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
                 throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
             }
@@ -203,10 +336,10 @@ public interface StaticChecker extends ReservedName{
 
             expectedType1 = TypeSystem.NAT;
             Preconditions.checkType(expectedType1, inferredType1,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType1));
+                    String.format("Input to %s's 1st param must be of type %s.", functionName, expectedType1));
             expectedType2 = TypeSystem.NAT;
             Preconditions.checkType(expectedType2, inferredType2,
-                    String.format("Input to %s must be of type %s.", functionName, expectedType2));
+                    String.format("Input to %s's 2nd param must be of type %s.", functionName, expectedType2));
             ret = TypeSystem.BOOL;
         }
 
@@ -225,13 +358,13 @@ public interface StaticChecker extends ReservedName{
                 e = Car(Cdr(s));
                 inferedType_b = this.evalType(b);
                 Preconditions.checkType(TypeSystem.BOOL, inferedType_b,
-                        String.format("Input to %s must be of type %s.", functionName, TypeSystem.BOOL));
+                        String.format("Input to %s's b_i must be of type %s.", functionName, TypeSystem.BOOL));
                 inferedType_e = this.evalType(e);
                 if(expectedType_e == null) {
                     expectedType_e = inferedType_e;
                 }
                 Preconditions.checkType(expectedType_e, inferedType_e,
-                        String.format("Input to %s must be of type %s.", functionName, expectedType_e));
+                        String.format("Input to %s's e_i  must be of same type.", functionName));
                 curNode = Cdr(curNode);
             }
             ret = expectedType_e;

@@ -1,23 +1,20 @@
 UndefinedBehavior - Function name must be a Literal Atom.
-UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aList: {}
-UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aList: {}
-UndefinedBehavior - Variable has not been Declared/Init.  Variable Name:T12 aList: {}
-UndefinedBehavior - undefined function F
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Function Name could not be list.
-UndefinedBehavior - Function name must be different from Built-in Atom Names.
-UndefinedBehavior - Function name must be different from Built-in Function Names.
-UndefinedBehavior - Function Name Atom must be Literal Atom.
-UndefinedBehavior - Parameter name must be unique.
-UndefinedBehavior - In parameter list, only Literal Atom is accepted
-UndefinedBehavior - Parameter name must be different with reserved words.
-UndefinedBehavior - Parameter name must be different with reserved words.
-UndefinedBehavior - Parameter name must be different with reserved words.
+UndefinedBehavior - Undefined Behavior for a single atom.
+UndefinedBehavior - undefined function DEFUN
+TYPE ERROR: Input to NULL must be of type List(Nat).
 UndefinedBehavior - Formals list have different length with Actual list
 UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Parameter name must be different with reserved words.
+UndefinedBehavior - undefined function MINUS
+UndefinedBehavior - undefined function MINUS
+UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to CONS 2nd param must be of type List(Nat).
+TYPE ERROR: Input to NULL must be of type List(Nat).
+TYPE ERROR: Input to CONS 2nd param must be of type List(Nat).
+TYPE ERROR: Input to EQ's 1st param must be of type Nat.
+TYPE ERROR: Input to EQ's 1st param must be of type Nat.
+TYPE ERROR: Input to COND's e_i  must be of same type.
+TYPE ERROR: Input to CONS 1st param must be of type Nat.
 UndefinedBehavior - Formals list have different length with Actual list
 UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to PLUS's 1st param must be of type Nat.
+In CAR, List must be longer than 1 .

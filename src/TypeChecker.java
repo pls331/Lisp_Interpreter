@@ -1,5 +1,5 @@
-import util.TreeNode;
-import util.TreeUtil;
+import util.Pair;
+import util.TypeSystem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,7 +25,6 @@ public class TypeChecker {
 
 	public static void main(String[] args) throws IOException {
 		TypeChecker interpreter = new TypeChecker(System.in);
-
 		interpreter.parse( false ); // Project 2 output
 		interpreter.eval(true, false);
 		System.exit(0);
@@ -60,8 +59,8 @@ public class TypeChecker {
 
     public ArrayList<String> getResult(){
 		ArrayList<String> resList = new ArrayList<>();
-		for(TreeNode t : this.parser.resultList){
-			resList.add(TreeUtil.getListNotation(t));
+		for(Pair<TypeSystem, Integer> t : this.parser.resultList){
+			resList.add(t.toString());
 		}
 		return resList;
 	}

@@ -10,7 +10,7 @@ class InterpreterTest extends GroovyTestCase {
         System.setIn(fis);
         Interpreter interpreter2 = new Interpreter(System.in);
         interpreter2.parse( false ); // Project 2 output
-        interpreter2.eval(false, true);
+        interpreter2.eval(false, false);
         println "####### Invalid Test Case #######"
         ArrayList<String> msgList = interpreter2.getExceptionMsgList()
         ArrayList<String> ansList = getAnswers("InvalidTestAnswer.txt")
