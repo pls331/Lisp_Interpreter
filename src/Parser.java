@@ -1,9 +1,7 @@
+import exception.InvalidTypeException;
 import exception.UndefinedBehaviorException;
 import functions.StaticChecker;
-import util.Token;
-import util.TokenType;
-import util.TreeNode;
-import util.TreeUtil;
+import util.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -27,7 +25,7 @@ public class Parser implements StaticChecker{
 	 */
 	private LexicalScanner scn;
 	private ArrayList<TreeNode> rootList;
-	public ArrayList<TreeNode> resultList;
+	public ArrayList<TypeSystem> resultList;
 	public ArrayList<String> exMsgList;
 
 	public Parser(LexicalScanner scn) {
@@ -72,17 +70,21 @@ public class Parser implements StaticChecker{
 		for (TreeNode node : this.rootList){
 			try{
 				isExceptionCaught = false;
-				TreeNode evalRes = this.Eval(node, new HashMap<>());
-				this.resultList.add(evalRes);
+				// static type checking
+				TypeSystem evalType = this.evalType(node);
+				this.resultList.add(evalType);
+				// static empty list checking
+				//TODO
+
 				if(isPrint)
-					System.out.println(TreeUtil.getListNotation(evalRes));
-			}catch (ClassNotFoundException | NoSuchMethodException  |
-					IllegalAccessException  |InvocationTargetException e)
-			{
+					System.out.println(TreeUtil.getListNotation(node));
+			}catch (InvalidTypeException ite){
+				if(!isTesting) System.out.println(String.format(ite.getMessage()));
+				exMsgList.add(ite.getMessage());
 				isExceptionCaught = true;
-				exMsgList.add(e.getMessage());
-//				e.printStackTrace();
-			}catch (UndefinedBehaviorException udbe){
+//				ite.printStackTrace();
+			}
+			catch (UndefinedBehaviorException udbe){
 				if(!isTesting) System.out.println(String.format("ERROR: %s", udbe.getMessage()));
 				exMsgList.add(udbe.getMessage());
 				isExceptionCaught = true;

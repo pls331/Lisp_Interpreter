@@ -16,7 +16,6 @@ public class Interpreter {
 			scanner = new LexicalScanner(in);
 			scanner.init(); // get the first token in this.curToken
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.print("Failure during Scanner Initialization.");
 			e.printStackTrace();
 		}

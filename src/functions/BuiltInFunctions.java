@@ -116,7 +116,6 @@ public interface BuiltInFunctions extends ReservedName{
             s1 = Car(Cdr(expr));
             s1 = Eval(s1, aList);  // recursively eval s1
 
-//            TODO evaluate the atom from aList
 //            Preconditions.checkUndefinedBehavior(! (Atom(s1).equals(nodeT)), "Must be an Atom.");
             // use reflection to call the function by function name
             ret = (TreeNode) getBuiltInMethod(functionName, cl).invoke(this, s1);
@@ -266,7 +265,6 @@ public interface BuiltInFunctions extends ReservedName{
 
     default HashMap<String, TreeNode> addPairs(TreeNode paramList, TreeNode actualParams,
                                                  HashMap<String, TreeNode> aList){
-        //TODO check length of param & actual
         Preconditions.checkNotNull(paramList);
         Preconditions.checkNotNull(actualParams);
         TreeNode p = paramList;

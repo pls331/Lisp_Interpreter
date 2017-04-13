@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="Learn about commit." />
     <list default="true" id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="Output format confirmed.&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidTestCase.txt" afterPath="$PROJECT_DIR$/ValidTestCase.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interpreter.java" afterPath="$PROJECT_DIR$/src/Interpreter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TypeChecker.java" afterPath="$PROJECT_DIR$/src/TypeChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" afterPath="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TreeUtil.java" afterPath="$PROJECT_DIR$/src/util/TreeUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/Preconditions.java" afterPath="$PROJECT_DIR$/src/functions/Preconditions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/StaticChecker.java" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TypeSystem.java" afterPath="$PROJECT_DIR$/src/util/TypeSystem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" afterPath="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,32 +99,12 @@
     <favorites_list name="Interpreter_pan692" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="StaticChecker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
+    <leaf>
+      <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="272" column="68" lean-forward="false" selection-start-line="272" selection-start-column="28" selection-end-line="272" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuiltInFunctions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="360" column="21" lean-forward="false" selection-start-line="360" selection-start-column="21" selection-end-line="360" selection-end-column="21" />
+            <state relative-caret-position="434">
+              <caret line="97" column="88" lean-forward="false" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -136,12 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>token</find>
-      <find>eof</find>
-      <find>isAtom</find>
-      <find>is</find>
-      <find>toSt</find>
-      <find>OPEN</find>
       <find>expre</find>
       <find>getCu</find>
       <find>System.</find>
@@ -160,7 +141,24 @@
       <find>MOD</find>
       <find>eval</find>
       <find>NIL</find>
+      <find>new TreeNode(new Token(&quot;NIL&quot;, TokenType.LITERAL_ATOM))</find>
+      <find>new TreeNode(new Token(&quot;T&quot;, TokenType.LITERAL_ATOM))</find>
+      <find>new TreeNode(new Token(&quot;T&quot;,TokenType.LITERAL_ATOM))</find>
+      <find>new TreeNode(new Token(&quot;F&quot;,TokenType.LITERAL_ATOM))</find>
+      <find>CAR</find>
+      <find>Atom</find>
+      <find>EQ</find>
+      <find>NULL</find>
+      <find>ATOM</find>
+      <find>INT</find>
+      <find>Interpre</find>
+      <find>MINUS</find>
     </findStrings>
+    <replaceStrings>
+      <replace>nodeT</replace>
+      <replace>nodeF</replace>
+      <replace>PLUS</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LexicalScannerTest.java" />
-        <option value="$PROJECT_DIR$/src/Util/LexicalScannerTest.java" />
         <option value="$PROJECT_DIR$/test/LexicalScannerTest.java" />
         <option value="$PROJECT_DIR$/src/functions/OneParamFunction.java" />
         <option value="$PROJECT_DIR$/src/Util/Preconditions.java" />
@@ -214,21 +210,23 @@
         <option value="$PROJECT_DIR$/src/LexicalScanner.java" />
         <option value="$PROJECT_DIR$/EvaluateTest.txt" />
         <option value="$PROJECT_DIR$/ValidAnswer" />
-        <option value="$PROJECT_DIR$/src/Interpreter.java" />
-        <option value="$PROJECT_DIR$/ValidTestCase.txt" />
         <option value="$PROJECT_DIR$/ValidAnswer.txt" />
         <option value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
         <option value="$PROJECT_DIR$/InvalidTestCase" />
         <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
         <option value="$PROJECT_DIR$/src/exception/InvalidTypeException.java" />
-        <option value="$PROJECT_DIR$/src/TypeChecker.java" />
+        <option value="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
+        <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
         <option value="$PROJECT_DIR$/src/functions/Preconditions.java" />
         <option value="$PROJECT_DIR$/src/util/TypeSystem.java" />
-        <option value="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
+        <option value="$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy" />
         <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
-        <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
         <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
+        <option value="$PROJECT_DIR$/src/Interpreter.java" />
+        <option value="$PROJECT_DIR$/src/TypeChecker.java" />
+        <option value="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
+        <option value="$PROJECT_DIR$/ValidTestCase.txt" />
       </list>
     </option>
   </component>
@@ -236,10 +234,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="3226" />
-    <option name="height" value="1766" />
+    <option name="width" value="3200" />
+    <option name="height" value="1800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -328,7 +324,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -461,7 +457,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,16 +472,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="util" />
       <recent name="" />
       <recent name="functions" />
+      <recent name="util" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="functions" />
       <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Exception" />
@@ -977,7 +973,7 @@
       <configuration name="TypeSystemTest.testTypeCreation" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -987,29 +983,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3226" height="1766" extended-state="6" />
+    <frame x="0" y="0" width="3200" height="1800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282967" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33997253" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5032113" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19299936" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1953125" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.4967887" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17597945" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17597945" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22768144" sideWeight="0.5125448" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1018,9 +1011,12 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898352" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33997253" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4468814" sideWeight="0.5044958" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1082,8 +1078,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/functions/CAR.java" />
-    <entry file="file://$PROJECT_DIR$/src/functions/CDR.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/CONS.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/INT.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/ATOM.java" />
@@ -1162,13 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/LexicalScannerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/functions/ReservedNameTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-864">
@@ -1209,13 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1295,17 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,15 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/InterpreterTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,30 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TypeChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1365,17 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TypeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/util/TypeSystemTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="737">
@@ -1384,26 +1309,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <marker date="1492041347741" expanded="false" signature="27:127" ph="..." />
+            <marker date="1492041347741" expanded="true" signature="129:171" ph="/**...*/" />
+            <marker date="1492041347741" expanded="true" signature="250:360" ph="{...}" />
+            <marker date="1492041347741" expanded="true" signature="475:598" ph="{...}" />
+            <marker date="1492041347741" expanded="true" signature="735:870" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TypeSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <marker date="1492041347709" expanded="true" signature="15:58" ph="/**...*/" />
+            <marker date="1492041347709" expanded="false" signature="227:238" ph=" { " />
+            <marker date="1492041347709" expanded="false" signature="254:260" ph=" }" />
+            <marker date="1492041347709" expanded="true" signature="313:486" ph="{...}" />
+            <marker date="1492041347709" expanded="true" signature="580:743" ph="{...}" />
+            <marker date="1492041347709" expanded="false" signature="773:783" ph=" { " />
+            <marker date="1492041347709" expanded="false" signature="802:808" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="360" column="21" lean-forward="false" selection-start-line="360" selection-start-column="21" selection-end-line="360" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="403">
+          <caret line="267" column="10" lean-forward="false" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
+          <folding>
+            <marker date="1492042407079" expanded="false" signature="27:249" ph="..." />
+            <marker date="1492042407079" expanded="true" signature="251:293" ph="/**...*/" />
+            <marker date="1492042407079" expanded="true" signature="679:10924" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="823:1858" ph="node ::= Atom" />
+            <marker date="1492042407079" expanded="true" signature="1869:10897" ph="node ::= apply a Function" />
+            <marker date="1492042407079" expanded="true" signature="2306:3475" ph="Arithmetic Operator - Binary - Numeric Atom Input" />
+            <marker date="1492042407079" expanded="true" signature="3485:4437" ph="EQ - Binary - Atom Input" />
+            <marker date="1492042407079" expanded="true" signature="4447:5370" ph="ATOM | INT | NULL - Single - Atom Input" />
+            <marker date="1492042407079" expanded="true" signature="5082:5249" ph="//..." />
+            <marker date="1492042407079" expanded="true" signature="5380:6234" ph="CAR | CDR - Single - List Input" />
+            <marker date="1492042407079" expanded="true" signature="6244:7061" ph="CONS  - Single - List/Atom Input" />
+            <marker date="1492042407079" expanded="true" signature="7071:7429" ph="QUOTE  - List Input" />
+            <marker date="1492042407079" expanded="true" signature="7439:8505" ph="COND - Using on demand evaluation" />
+            <marker date="1492042407079" expanded="true" signature="8515:10303" ph="DEFUN - Functon Definition" />
+            <marker date="1492042407079" expanded="true" signature="10313:10754" ph="user-defined Function Call" />
+            <marker date="1492042407079" expanded="true" signature="11048:11380" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="11615:11898" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="12071:12774" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="12843:13184" ph="//..." />
+            <marker date="1492042407079" expanded="true" signature="13312:14305" ph="//..." />
+            <marker date="1492042407079" expanded="true" signature="14414:14598" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="14707:14891" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="15018:15246" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="15356:15603" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="15713:16017" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="16127:16412" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="16537:17031" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="17158:17814" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="17942:18599" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="18727:19384" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="19512:20257" ph="{...}" />
+            <marker date="1492042407079" expanded="true" signature="20387:21132" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="272" column="68" lean-forward="false" selection-start-line="272" selection-start-column="28" selection-end-line="272" selection-end-column="68" />
+        <state relative-caret-position="403">
+          <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+          <folding>
+            <marker date="1492042407010" expanded="false" signature="27:184" ph="..." />
+            <marker date="1492042407010" expanded="true" signature="186:228" ph="/**...*/" />
+            <marker date="1492042407010" expanded="true" signature="397:11322" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="542:1173" ph="node ::= Atom" />
+            <marker date="1492042407010" expanded="true" signature="11446:11778" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="11780:13222" ph="//..." />
+            <marker date="1492042407010" expanded="false" signature="13291:13632" ph="//..." />
+            <marker date="1492042407010" expanded="false" signature="13760:14727" ph="//..." />
+            <marker date="1492042407010" expanded="true" signature="14836:15020" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="15129:15313" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="15440:15668" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="15778:15931" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="16041:16251" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="16361:16552" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="16677:17077" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="17204:17860" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="17988:18645" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="18773:19430" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="19558:20207" ph="{...}" />
+            <marker date="1492042407010" expanded="true" signature="20337:20986" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <marker date="1492042406995" expanded="false" signature="7:128" ph="..." />
+            <marker date="1492042406995" expanded="true" signature="253:559" ph="{...}" />
+            <marker date="1492042406995" expanded="true" signature="620:1088" ph="{...}" />
+            <marker date="1492042406995" expanded="true" signature="828:1067" ph="//..." />
+            <marker date="1492042406995" expanded="true" signature="1092:1145" ph="/**...*/" />
+            <marker date="1492042406995" expanded="false" signature="1179:1183" ph=" { " />
+            <marker date="1492042406995" expanded="false" signature="1222:1225" ph=" }" />
+            <marker date="1492042406995" expanded="true" signature="1285:1381" ph="/**...*/" />
+            <marker date="1492042406995" expanded="false" signature="1415:1419" ph=" { " />
+            <marker date="1492042406995" expanded="false" signature="1453:1456" ph=" }" />
+            <marker date="1492042406995" expanded="false" signature="1493:1503" ph=" { " />
+            <marker date="1492042406995" expanded="false" signature="1535:1538" ph=" }" />
+            <marker date="1492042406995" expanded="false" signature="1593:1607" ph=" { " />
+            <marker date="1492042406995" expanded="false" signature="1644:1650" ph=" }" />
+            <marker date="1492042406995" expanded="true" signature="1692:1856" ph="{...}" />
+            <marker date="1492042406995" expanded="false" signature="1905:1909" ph=" { " />
+            <marker date="1492042406995" expanded="false" signature="1965:1968" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/LexicalScannerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1487387376253" expanded="true" signature="7:39" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="41:84" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="166:2947" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="176:213" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="367:535" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="673:721" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="869:987" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="2705:2811" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          <folding>
+            <marker date="1492042407064" expanded="false" signature="7:237" ph="..." />
+            <marker date="1492042407064" expanded="true" signature="252:281" ph="/**...*/" />
+            <marker date="1492042407064" expanded="true" signature="380:523" ph="/**...*/" />
+            <marker date="1492042407064" expanded="true" signature="707:913" ph="{...}" />
+            <marker date="1492042407064" expanded="false" signature="947:951" ph=" { " />
+            <marker date="1492042407064" expanded="false" signature="973:976" ph=" }" />
+            <marker date="1492042407064" expanded="true" signature="1047:1668" ph="{...}" />
+            <marker date="1492042407064" expanded="true" signature="1739:2969" ph="{...}" />
+            <marker date="1492042407064" expanded="true" signature="1970:2010" ph="//..." />
+            <marker date="1492042407064" expanded="true" signature="3006:4486" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TypeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+          <folding>
+            <marker date="1492042407032" expanded="false" signature="7:128" ph="..." />
+            <marker date="1492042407032" expanded="true" signature="252:558" ph="{...}" />
+            <marker date="1492042407032" expanded="true" signature="619:781" ph="{...}" />
+            <marker date="1492042407032" expanded="true" signature="785:838" ph="/**...*/" />
+            <marker date="1492042407032" expanded="false" signature="872:876" ph=" { " />
+            <marker date="1492042407032" expanded="false" signature="915:918" ph=" }" />
+            <marker date="1492042407032" expanded="true" signature="978:1074" ph="/**...*/" />
+            <marker date="1492042407032" expanded="false" signature="1108:1112" ph=" { " />
+            <marker date="1492042407032" expanded="false" signature="1146:1149" ph=" }" />
+            <marker date="1492042407032" expanded="false" signature="1186:1196" ph=" { " />
+            <marker date="1492042407032" expanded="false" signature="1228:1231" ph=" }" />
+            <marker date="1492042407032" expanded="true" signature="1286:1300" ph=" { " />
+            <marker date="1492042407032" expanded="true" signature="1337:1343" ph=" }" />
+            <marker date="1492042407032" expanded="true" signature="1385:1549" ph="{...}" />
+            <marker date="1492042407032" expanded="false" signature="1598:1602" ph=" { " />
+            <marker date="1492042407032" expanded="false" signature="1658:1661" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/InterpreterTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1074">
+          <caret line="55" column="5" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <marker date="1490664931371" expanded="true" signature="32:75" ph="/**...*/" />
+            <marker date="1490664931371" expanded="true" signature="147:953" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="743:947" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="976:1827" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="1652:1820" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="1885:2284" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="2212:2226" ph="{" />
+            <marker date="1490664931371" expanded="true" signature="2212:2254" ph="{...}" />
+            <marker date="1490664931371" expanded="true" signature="2244:2254" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <marker date="1492042407048" expanded="false" signature="33:76" ph="/**...*/" />
+            <marker date="1492042407048" expanded="true" signature="145:995" ph="{...}" />
+            <marker date="1492042407048" expanded="true" signature="821:989" ph="{...}" />
+            <marker date="1492042407048" expanded="true" signature="1053:1452" ph="{...}" />
+            <marker date="1492042407048" expanded="true" signature="1380:1394" ph="{" />
+            <marker date="1492042407048" expanded="true" signature="1380:1422" ph="{...}" />
+            <marker date="1492042407048" expanded="true" signature="1412:1422" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="97" column="88" lean-forward="false" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="88" />
           <folding />
         </state>
       </provider>

@@ -4,7 +4,7 @@ package util;
  * Created by lenovo1 on 2017/4/10.
  */
 public enum TypeSystem {
-    AnyT("Any Type"),
+    AnyType("Any Type"),
     BOOL("Bool"),
     NAT("Nat"),
     LIST_NAT("List(Nat)");
@@ -27,7 +27,7 @@ public enum TypeSystem {
     Same type or subtype.
      */
     public boolean isOfType(TypeSystem anotherType){
-        if(this.equals(anotherType) || anotherType.equals(TypeSystem.AnyT)){
+        if(this.equals(anotherType) || anotherType.equals(TypeSystem.AnyType)){
            return true;
         }else {
             return false;

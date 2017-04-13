@@ -24,8 +24,8 @@ public class Preconditions {
 
     public static void checkType(TypeSystem expectedType, TypeSystem inferredType, String msg)
             throws InvalidTypeException {
-        if (!expectedType.equals(inferredType)) {
-            throw new InvalidTypeException("InvalidType" + msg);
+        if (!inferredType.isOfType(expectedType)) {
+            throw new InvalidTypeException("TYPE ERROR: " + msg);
         }
     }
 }

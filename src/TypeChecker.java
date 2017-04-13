@@ -16,7 +16,6 @@ public class TypeChecker {
 			scanner = new LexicalScanner(in);
 			scanner.init(); // get the first token in this.curToken
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.print("Failure during Scanner Initialization.");
 			e.printStackTrace();
 		}
@@ -27,12 +26,8 @@ public class TypeChecker {
 	public static void main(String[] args) throws IOException {
 		TypeChecker interpreter = new TypeChecker(System.in);
 
-//		System.out.println("#### Project2: Parser PrettyPrint ####");
 		interpreter.parse( false ); // Project 2 output
 		interpreter.eval(true, false);
-//		System.out.println("\n#### Project1: Input Stream Statistics ####");
-//		System.out.println(interpreter.getScannerOutput());  // Output Parsing result as Project1 Required
-//		System.out.println("__Interpreter Finished Excecution.__");
 		System.exit(0);
 	}
 	
