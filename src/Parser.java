@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * @author lenovo1
  *
  */
-//public class Parser implements BuiltInFunctions{
 public class Parser implements StaticChecker{
 	/**
 	 * Context-free Gramma:
