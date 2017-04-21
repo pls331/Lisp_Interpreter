@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="Learn about commit." />
     <list default="true" id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="Output format confirmed.&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ValidAnswer.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ValidTestCase.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Interpreter_pan692.iml" afterPath="$PROJECT_DIR$/.idea/Interpreter_pan692.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-<<<<<<< Updated upstream
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/Preconditions.java" afterPath="$PROJECT_DIR$/src/functions/Preconditions.java" />
->>>>>>> Stashed changes
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvalidTestAnswer.txt" afterPath="$PROJECT_DIR$/InvalidTestAnswer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvalidTestCase.txt" afterPath="$PROJECT_DIR$/InvalidTestCase.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidAnswer.txt" afterPath="$PROJECT_DIR$/ValidAnswer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidTestCase.txt" afterPath="$PROJECT_DIR$/ValidTestCase.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/StaticChecker.java" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TreeUtil.java" afterPath="$PROJECT_DIR$/src/util/TreeUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" afterPath="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,13 +23,8 @@
   </component>
   <component name="CloverPlugin" class="com.atlassian.clover.idea.config.IdeaCloverConfig">
     <includePassedTestCoverageOnly>true</includePassedTestCoverageOnly>
-<<<<<<< Updated upstream
-    <manualInitString null="true" />
-    <useGeneratedInitString>true</useGeneratedInitString>
-=======
     <useGeneratedInitString>true</useGeneratedInitString>
     <manualInitString null="true" />
->>>>>>> Stashed changes
     <showTooltips>true</showTooltips>
     <failedCoveredHighlight>-11513856</failedCoveredHighlight>
     <periodicRefresh>false</periodicRefresh>
@@ -40,19 +35,11 @@
     <coveredHighlight>-16756736</coveredHighlight>
     <outOfDateStripe>-256</outOfDateStripe>
     <includes null="true" />
-<<<<<<< Updated upstream
     <excludes>Interpreter.java, functions/BuiltInFunctions.java</excludes>
     <alwaysExpandTestClasses>false</alwaysExpandTestClasses>
     <autoViewInCloudReport>true</autoViewInCloudReport>
-    <filteredHighlight>-11513776</filteredHighlight>
-    <flushPolicy>0</flushPolicy>
-=======
-    <excludes null="true" />
-    <alwaysExpandTestClasses>false</alwaysExpandTestClasses>
-    <autoViewInCloudReport>true</autoViewInCloudReport>
     <flushPolicy>0</flushPolicy>
     <filteredHighlight>-11513776</filteredHighlight>
->>>>>>> Stashed changes
     <outOfDateHighlight>-16777201</outOfDateHighlight>
     <showInline>false</showInline>
     <dumpInstrumentedSources>false</dumpInstrumentedSources>
@@ -75,23 +62,14 @@
     <generatedInitString>C:\Users\lenovo1\OneDrive\6341 Foundation of Programming Language\01 Projects\Interpreter_pan692\.clover\coverage.db</generatedInitString>
     <regexpContexts class="java.util.ArrayList" />
     <flushInterval>5000</flushInterval>
-<<<<<<< Updated upstream
-    <flattenPackages>false</flattenPackages>
-    <viewIncludeAnnotation>true</viewIncludeAnnotation>
-=======
     <viewIncludeAnnotation>true</viewIncludeAnnotation>
     <flattenPackages>false</flattenPackages>
->>>>>>> Stashed changes
     <loadPerTestData>true</loadPerTestData>
     <showErrorMarks>true</showErrorMarks>
     <buildWithClover>true</buildWithClover>
     <lastProjectConfigTabSelected>0</lastProjectConfigTabSelected>
     <contextFilterSpec />
-<<<<<<< Updated upstream
     <span>0 days</span>
-=======
-    <span>0</span>
->>>>>>> Stashed changes
     <instrumentTests>true</instrumentTests>
     <projectRebuild class="com.atlassian.clover.idea.config.ProjectRebuild">ASK</projectRebuild>
     <showSummaryInToolbar>true</showSummaryInToolbar>
@@ -103,10 +81,6 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Interpreter_pan692$LexicalScannerTest_testGetCurrentToken.coverage" NAME="LexicalScannerTest.testGetCurrentToken Coverage Results" MODIFIED="1487211041715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Interpreter_pan692$InterpreterTest_testValid.coverage" NAME="InterpreterTest.testValid Coverage Results" MODIFIED="1490637677836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-<<<<<<< Updated upstream
-=======
-    <SUITE FILE_PATH="coverage/Interpreter_pan692$TypeCheckerTest.coverage" NAME="TypeCheckerTest Coverage Results" MODIFIED="1492522895345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
->>>>>>> Stashed changes
     <SUITE FILE_PATH="coverage/Interpreter_pan692$Interpreter.coverage" NAME="Interpreter Coverage Results" MODIFIED="1486526495797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
@@ -124,155 +98,112 @@
     <favorites_list name="Interpreter_pan692" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< Updated upstream
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="LexicalScanner.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LexicalScanner.java">
+      <file leaf-file-name="InvalidTestAnswer.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="214">
+              <caret line="54" column="53" lean-forward="true" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidAnswer.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preconditions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvalidTestCase.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InvalidTestCase.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeCheckerTest.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1350">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaticChecker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-=======
-    <splitter split-orientation="horizontal" split-proportion="0.4517685">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="UndefinedBehaviorException.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/exception/UndefinedBehaviorException.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Preconditions.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1125">
-                  <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1710">
-                  <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TypeCheckerTest.groovy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1080">
-                  <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Parser.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="407">
-                  <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TreeUtil.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3240">
-                  <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StaticChecker.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="13590">
-                  <caret line="309" column="13" lean-forward="false" selection-start-line="309" selection-start-column="13" selection-end-line="309" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ValidAnswer.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1980">
-                  <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
->>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-<<<<<<< Updated upstream
         <option value="Interface" />
         <option value="Enum" />
-=======
->>>>>>> Stashed changes
         <option value="Class" />
-        <option value="Enum" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-<<<<<<< Updated upstream
-=======
-      <find>token</find>
-      <find>eof</find>
-      <find>isAtom</find>
-      <find>is</find>
-      <find>toSt</find>
-      <find>OPEN</find>
-      <find>expre</find>
-      <find>getCu</find>
-      <find>System.</find>
-      <find>equa</find>
-      <find>Cdr</find>
-      <find>NOT Numeric Atom</find>
->>>>>>> Stashed changes
-      <find>ERROR</find>
-      <find>aList</find>
       <find>evlist</find>
       <find>HashMap&lt;Strin</find>
       <find>System.out</find>
@@ -281,7 +212,6 @@
       <find>Cdr:</find>
       <find>Append</find>
       <find>MOD</find>
-<<<<<<< Updated upstream
       <find>eval</find>
       <find>NIL</find>
       <find>new TreeNode(new Token(&quot;NIL&quot;, TokenType.LITERAL_ATOM))</find>
@@ -302,10 +232,8 @@
       <find>for a si</find>
       <find>CONS</find>
       <find>Cannot be atom</find>
-=======
-      <find>PLUS</find>
-      <find>throw new UndefinedBehaviorException</find>
->>>>>>> Stashed changes
+      <find>undefined function</find>
+      <find>Formals list have different length with Actual list</find>
     </findStrings>
     <replaceStrings>
       <replace>nodeT</replace>
@@ -319,7 +247,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Proj4" />
+        <entry key="$PROJECT_DIR$" value="Proj3" />
       </map>
     </option>
   </component>
@@ -347,13 +275,8 @@
         <option value="$PROJECT_DIR$/test/LexicalScannerTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/TokenUtil.java" />
         <option value="$PROJECT_DIR$/test/util/TreeNodeTest.groovy" />
-        <option value="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
         <option value="$PROJECT_DIR$/test/util/TokenTest.groovy" />
         <option value="$PROJECT_DIR$/ParserTest.txt" />
-<<<<<<< Updated upstream
-=======
-        <option value="$PROJECT_DIR$/src/util/Pair.java" />
->>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/test/util/PairTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/functions/BuiltInFunctionNames.java" />
@@ -363,12 +286,11 @@
         <option value="$PROJECT_DIR$/test/functions/ReservedNameTest.groovy" />
         <option value="$PROJECT_DIR$/test/functions/BuiltInFunctionsTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/Token.java" />
-<<<<<<< Updated upstream
+        <option value="$PROJECT_DIR$/src/LexicalScanner.java" />
         <option value="$PROJECT_DIR$/EvaluateTest.txt" />
         <option value="$PROJECT_DIR$/ValidAnswer" />
         <option value="$PROJECT_DIR$/src/exception/InvalidTypeException.java" />
         <option value="$PROJECT_DIR$/test/util/TypeSystemTest.groovy" />
-        <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
         <option value="$PROJECT_DIR$/src/util/TypeSystem.java" />
         <option value="$PROJECT_DIR$/test/functions/StaticCheckerTest.groovy" />
         <option value="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
@@ -377,34 +299,17 @@
         <option value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
         <option value="$PROJECT_DIR$/src/exception/EmptyListException.java" />
         <option value="$PROJECT_DIR$/src/functions/Preconditions.java" />
-        <option value="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/Pair.java" />
         <option value="$PROJECT_DIR$/src/TypeChecker.java" />
-        <option value="$PROJECT_DIR$/ValidTestCase.txt" />
-        <option value="$PROJECT_DIR$/ValidAnswer.txt" />
-        <option value="$PROJECT_DIR$/InvalidTestCase.txt" />
         <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
-        <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
-        <option value="$PROJECT_DIR$/src/LexicalScanner.java" />
-=======
-        <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
-        <option value="$PROJECT_DIR$/src/LexicalScanner.java" />
-        <option value="$PROJECT_DIR$/EvaluateTest.txt" />
-        <option value="$PROJECT_DIR$/ValidAnswer" />
-        <option value="$PROJECT_DIR$/src/Interpreter.java" />
-        <option value="$PROJECT_DIR$/InvalidTestCase" />
-        <option value="$PROJECT_DIR$/src/functions/BuiltInFunctions.java" />
-        <option value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
         <option value="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
-        <option value="$PROJECT_DIR$/src/functions/Preconditions.java" />
-        <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
-        <option value="$PROJECT_DIR$/ValidAnswer.txt" />
+        <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
+        <option value="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/ValidTestCase.txt" />
+        <option value="$PROJECT_DIR$/ValidAnswer.txt" />
         <option value="$PROJECT_DIR$/InvalidTestCase.txt" />
         <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
->>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -413,10 +318,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-13" />
-<<<<<<< Updated upstream
-    <option name="y" value="-13" />
-=======
->>>>>>> Stashed changes
     <option name="width" value="3214" />
     <option name="height" value="1766" />
   </component>
@@ -508,10 +409,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-<<<<<<< Updated upstream
-      <pane id="PackagesPane" />
-=======
->>>>>>> Stashed changes
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -533,12 +430,61 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Interpreter_pan692">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="util">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Interpreter_pan692">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="functions">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Interpreter_pan692">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="src">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< Updated upstream
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
@@ -593,26 +539,17 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-=======
->>>>>>> Stashed changes
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-<<<<<<< Updated upstream
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.excludes" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test/InterpreterTest.groovy" />
-=======
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
->>>>>>> Stashed changes
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="SearchEverywhereHistoryKey" value="Eval&#9;PSI&#9;JAVA://functions.BuiltInFunctions#Eval&#10;show in ex&#9;ACTION&#9;RevealIn&#10;open &#9;ACTION&#9;OpenInBrowserEditorContextBarGroupAction&#10;todo&#9;ACTION&#9;ActivateTODOToolWindow" />
@@ -635,32 +572,7 @@
       <recent name="Exception" />
     </key>
   </component>
-<<<<<<< Updated upstream
   <component name="RunManager" selected="JUnit.TypeCheckerTest.testInvalid">
-=======
-  <component name="RunManager" selected="JUnit.TypeCheckerTest">
->>>>>>> Stashed changes
-    <configuration default="false" name="InterpreterTest.testInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Interpreter_pan692" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InterpreterTest" />
-      <option name="METHOD_NAME" value="testInvalid" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="InterpreterTest.testValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Interpreter_pan692" />
@@ -670,9 +582,9 @@
       <option name="MAIN_CLASS_NAME" value="InterpreterTest" />
       <option name="METHOD_NAME" value="testValid" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Xss16m" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -744,6 +656,32 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TypeCheckerTest" />
       <option name="METHOD_NAME" value="testInvalid" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TreeUtilTest.testPrettyPrint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Interpreter_pan692" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="util" />
+      <option name="MAIN_CLASS_NAME" value="util.TreeUtilTest" />
+      <option name="METHOD_NAME" value="testPrettyPrint" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -977,27 +915,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TreeUtilTest.testPrettyPrint" />
     </list>
     <recent_temporary>
       <list size="5">
-<<<<<<< Updated upstream
         <item index="0" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
-=======
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testInvalid" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
->>>>>>> Stashed changes
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TreeUtilTest.testPrettyPrint" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1092,67 +1022,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-<<<<<<< Updated upstream
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 00s.xml">
+    <history-entry file="InterpreterTest_testValid - 2017.04.20 at 21h 04m 56s.xml">
+      <configuration name="InterpreterTest.testValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 20h 59m 07s.xml">
+      <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 00m 49s.xml">
+      <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 01m 07s.xml">
+      <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 02m 37s.xml">
+      <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.20 at 21h 11m 03s.xml">
       <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 27s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 48m 34s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.12 at 23h 49m 11s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 34m 45s.xml">
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 05m 01s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 39m 54s.xml">
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 06m 12s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 42m 48s.xml">
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 08m 36s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 44m 49s.xml">
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 10m 55s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 45m 57s.xml">
-      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.12 at 23h 47m 50s.xml">
-      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
-=======
-    <history-entry file="TypeCheckerTest - 2017.04.20 at 20h 16m 14s.xml">
-      <configuration name="TypeCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest - 2017.04.20 at 20h 24m 34s.xml">
-      <configuration name="TypeCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 31m 38s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 32m 05s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 32m 26s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 33m 06s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 33m 32s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 34m 01s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 34m 26s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testInvalid - 2017.04.18 at 09h 34m 45s.xml">
-      <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
->>>>>>> Stashed changes
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1165,49 +1063,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< Updated upstream
-    <frame x="-13" y="-13" width="3214" height="1766" extended-state="0" />
+    <frame x="-13" y="0" width="3214" height="1766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33944446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5032113" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12706044" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20051579" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22308189" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17597945" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22768144" sideWeight="0.5125448" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-=======
-    <frame x="-13" y="0" width="3214" height="1766" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282967" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.39490652" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41346154" sideWeight="0.6050935" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19793682" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470019" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22768144" sideWeight="0.5125448" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
->>>>>>> Stashed changes
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1216,60 +1093,13 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898352" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-<<<<<<< Updated upstream
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33944446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.365" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4468814" sideWeight="0.5044958" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.4967887" order="4" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33997253" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899246" sideWeight="0.39490652" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.49807322" order="4" side_tool="false" content_ui="tabs" />
->>>>>>> Stashed changes
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5032113" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898352" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17597945" sideWeight="0.49561402" order="7" side_tool="false" content_ui="tabs" x="2138" y="614" width="722" height="558" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.4987155" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33944446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.365" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4468814" sideWeight="0.5044958" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20051579" sideWeight="0.4874552" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.4967887" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22768144" sideWeight="0.5125448" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1315,11 +1145,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-<<<<<<< Updated upstream
       <option name="time" value="35" />
-=======
-      <option name="time" value="34" />
->>>>>>> Stashed changes
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1332,7 +1158,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/functions/INT.java" />
     <entry file="file://$PROJECT_DIR$/src/functions/ATOM.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileOutputStream.java">
@@ -1432,6 +1257,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/util/TreeNodeTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1473,6 +1305,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="8" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,13 +1313,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1501,6 +1328,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1516,137 +1344,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/functions/CDR.java" />
-    <entry file="file://$PROJECT_DIR$/src/functions/CONS.java" />
-    <entry file="file://$PROJECT_DIR$/src/functions/INT.java" />
-    <entry file="file://$PROJECT_DIR$/src/functions/ATOM.java" />
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/BufferedOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TokenUtil.java" />
-    <entry file="file://$PROJECT_DIR$/test/util/TokenUtilTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/TokenTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/requests/FilterRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76365">
-          <caret line="1780" column="41" lean-forward="false" selection-start-line="1780" selection-start-column="41" selection-end-line="1780" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ScannerInput.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParserTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/PairTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/util/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctionNames.java" />
-    <entry file="file://$PROJECT_DIR$/test/functions/BuiltInFunctionEnumTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctionEnum.java" />
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="565" column="20" lean-forward="false" selection-start-line="565" selection-start-column="20" selection-end-line="565" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/LexicalScannerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/functions/ReservedNameTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/util/Pair.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/groovy-all-2.4.6.jar!/org/codehaus/groovy/runtime/callsite/AbstractCallSite.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvaluateTest.txt" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/TreeNodeTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_111/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
->>>>>>> Stashed changes
+          <folding>
+            <marker date="1487387376253" expanded="true" signature="7:39" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="41:84" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="166:2947" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="176:213" ph="/**...*/" />
+            <marker date="1487387376253" expanded="true" signature="367:535" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="673:721" ph="..." />
+            <marker date="1487387376253" expanded="true" signature="869:987" ph="{...}" />
+            <marker date="1487387376253" expanded="true" signature="2705:2811" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1654,56 +1361,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/util/TypeSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="23" />
-=======
-    <entry file="file://$PROJECT_DIR$/InvalidTestCase" />
-    <entry file="file://$PROJECT_DIR$/src/functions/ReservedName.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
->>>>>>> Stashed changes
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/BuiltInFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
         <state relative-caret-position="691">
           <caret line="111" column="82" lean-forward="false" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-=======
-        <state relative-caret-position="20655">
-          <caret line="467" column="24" lean-forward="false" selection-start-line="467" selection-start-column="24" selection-end-line="467" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
->>>>>>> Stashed changes
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/InterpreterTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
         <state relative-caret-position="450">
           <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding>
+            <element signature="e#1593#1594#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1711,6 +1404,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1718,6 +1412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1725,198 +1420,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <marker date="1492054367945" expanded="false" signature="7:126" ph="..." />
-            <marker date="1492054367945" expanded="true" signature="250:556" ph="{...}" />
-            <marker date="1492054367945" expanded="true" signature="617:778" ph="{...}" />
-            <marker date="1492054367945" expanded="true" signature="782:835" ph="/**...*/" />
-            <marker date="1492054367945" expanded="false" signature="869:873" ph=" { " />
-            <marker date="1492054367945" expanded="false" signature="912:915" ph=" }" />
-            <marker date="1492054367945" expanded="true" signature="975:1071" ph="/**...*/" />
-            <marker date="1492054367945" expanded="false" signature="1105:1109" ph=" { " />
-            <marker date="1492054367945" expanded="false" signature="1143:1146" ph=" }" />
-            <marker date="1492054367945" expanded="false" signature="1183:1193" ph=" { " />
-            <marker date="1492054367945" expanded="false" signature="1225:1228" ph=" }" />
-            <marker date="1492054367945" expanded="false" signature="1283:1297" ph=" { " />
-            <marker date="1492054367945" expanded="false" signature="1334:1340" ph=" }" />
-            <marker date="1492054367945" expanded="true" signature="1382:1548" ph="{...}" />
-            <marker date="1492054367945" expanded="false" signature="1597:1601" ph=" { " />
-            <marker date="1492054367945" expanded="false" signature="1657:1660" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="274">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+        <state relative-caret-position="-1350">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InvalidTestCase.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        <state relative-caret-position="525">
+          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-=======
-        <state relative-caret-position="1260">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/InterpreterTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/TypeChecker.java" />
-    <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        <state relative-caret-position="214">
+          <caret line="54" column="53" lean-forward="true" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/EmptyListException.java" />
-    <entry file="file://$PROJECT_DIR$/src/exception/InvalidTypeException.java" />
-    <entry file="file://$PROJECT_DIR$/src/exception/UndefinedBehaviorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/Preconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13590">
-          <caret line="309" column="13" lean-forward="false" selection-start-line="309" selection-start-column="13" selection-end-line="309" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidAnswer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvalidTestCase.txt" />
-    <entry file="file://$PROJECT_DIR$/InvalidTestAnswer.txt" />
-    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
->>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="549">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="532">
+          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding>
-            <marker date="1492055310624" expanded="true" signature="7:159" ph="..." />
-            <marker date="1492055310624" expanded="true" signature="174:203" ph="/**...*/" />
-            <marker date="1492055310624" expanded="true" signature="302:445" ph="/**...*/" />
-            <marker date="1492055310624" expanded="true" signature="644:850" ph="{...}" />
-            <marker date="1492055310624" expanded="false" signature="884:888" ph=" { " />
-            <marker date="1492055310624" expanded="false" signature="910:913" ph=" }" />
-            <marker date="1492055310624" expanded="true" signature="984:1605" ph="{...}" />
-            <marker date="1492055310624" expanded="true" signature="1693:3267" ph="{...}" />
-            <marker date="1492055310624" expanded="true" signature="2248:2324" ph="//..." />
-            <marker date="1492055310624" expanded="true" signature="3304:4784" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/StaticChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <marker date="1492042406995" expanded="false" signature="7:128" ph="..." />
-            <marker date="1492042406995" expanded="true" signature="253:559" ph="{...}" />
-            <marker date="1492042406995" expanded="true" signature="620:1088" ph="{...}" />
-            <marker date="1492042406995" expanded="true" signature="828:1067" ph="//..." />
-            <marker date="1492042406995" expanded="true" signature="1092:1145" ph="/**...*/" />
-            <marker date="1492042406995" expanded="false" signature="1179:1183" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1222:1225" ph=" }" />
-            <marker date="1492042406995" expanded="true" signature="1285:1381" ph="/**...*/" />
-            <marker date="1492042406995" expanded="false" signature="1415:1419" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1453:1456" ph=" }" />
-            <marker date="1492042406995" expanded="false" signature="1493:1503" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1535:1538" ph=" }" />
-            <marker date="1492042406995" expanded="false" signature="1593:1607" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1644:1650" ph=" }" />
-            <marker date="1492042406995" expanded="true" signature="1692:1856" ph="{...}" />
-            <marker date="1492042406995" expanded="false" signature="1905:1909" ph=" { " />
-            <marker date="1492042406995" expanded="false" signature="1965:1968" ph=" }" />
-          </folding>
-=======
-        <state relative-caret-position="407">
-          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LexicalScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>

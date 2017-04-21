@@ -1,12 +1,12 @@
-UndefinedBehavior - Function name must be a Literal Atom.
-UndefinedBehavior - Undefined Behavior for a single atom.
-UndefinedBehavior - undefined function DEFUN
+TYPE ERROR: UndefinedBehavior - Function name must be a Literal Atom.
+TYPE ERROR: UndefinedBehavior - Undefined Behavior for a single atom.
+TYPE ERROR: UndefinedBehavior - undefined function DEFUN
 TYPE ERROR: Input to NULL must be of type List(Nat).
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - undefined function MINUS
-UndefinedBehavior - undefined function MINUS
-UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - undefined function MINUS
+TYPE ERROR: UndefinedBehavior - undefined function MINUS
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
 TYPE ERROR: Input to CONS 2nd param must be of type List(Nat).
 TYPE ERROR: Input to NULL must be of type List(Nat).
 TYPE ERROR: Input to CONS 2nd param must be of type List(Nat).
@@ -14,7 +14,48 @@ TYPE ERROR: Input to EQ's 1st param must be of type Nat.
 TYPE ERROR: Input to EQ's 1st param must be of type Nat.
 TYPE ERROR: Input to COND's e_i  must be of same type.
 TYPE ERROR: Input to CONS 1st param must be of type Nat.
-UndefinedBehavior - Formals list have different length with Actual list
-UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: In CAR, List must be longer than 1 .
+TYPE ERROR: UndefinedBehavior - Undefined Behavior for a single atom.
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to CONS 1st param must be of type Nat.
+TYPE ERROR: Input to CONS 1st param must be of type Nat.
+TYPE ERROR: Input to CONS 1st param must be of type Nat.
+TYPE ERROR: Input to CONS 2nd param must be of type List(Nat).
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Undefined Behavior for a single atom.
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to EQ's 1st param must be of type Nat.
+TYPE ERROR: Input to EQ's 2nd param must be of type Nat.
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to NULL must be of type List(Nat).
+TYPE ERROR: Input to NULL must be of type List(Nat).
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
 TYPE ERROR: Input to PLUS's 1st param must be of type Nat.
-In CAR, List must be longer than 1 .
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: Input to PLUS's 2nd param must be of type Nat.
+TYPE ERROR: Input to PLUS's 1st param must be of type Nat.
+TYPE ERROR: Input to CAR must be of type List(Nat).
+TYPE ERROR: Input to CAR must be of type List(Nat).
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: UndefinedBehavior - Length must be > 1
+TYPE ERROR: UndefinedBehavior - (b, e) in condition must be a list
+TYPE ERROR: UndefinedBehavior - (b, e) in condition must be a list
+TYPE ERROR: UndefinedBehavior - (b, e) in condition must be a list
+TYPE ERROR: Input to COND's b_i must be of type Bool.
+TYPE ERROR: Input to COND's b_i must be of type Bool.
+TYPE ERROR: Input to COND's e_i  must be of same type.
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: In CAR, List must be longer than 1 .
+TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list
+TYPE ERROR: In CAR, List must be longer than 1 .

@@ -4,13 +4,11 @@ import java.nio.charset.Charset
  * Created by lenovo1 on 2017/4/12.
  */
 class TypeCheckerTest extends GroovyTestCase {
-
     void testInvalid() {
         // evaluate valid input
         InputStream is = null;
         is = new FileInputStream(new File("InvalidTestCase.txt"));
         System.setIn(is);
-
         TypeChecker typeChecker = new TypeChecker(System.in);
         typeChecker.parse( false ); // Project 2 output
         typeChecker.eval(false, true);

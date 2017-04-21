@@ -191,7 +191,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             inferredType1 = evalType(s1);  // recursively check s1
@@ -206,7 +206,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             inferredType1 = evalType(s1);  // recursively check s1
@@ -221,7 +221,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             s2 = Car(Cdr(Cdr(expr)));
@@ -241,7 +241,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             inferredType1 = evalType(s1);  // recursively eval s1
@@ -256,7 +256,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             s2 = Car(Cdr(Cdr(expr)));
@@ -276,7 +276,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             inferredType1 = evalType(s1);  // recursively eval s1
@@ -291,7 +291,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(expr)).equals(nodeNIL), "Length != 2");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             inferredType1 = evalType(s1);  // recursively eval s1
@@ -306,7 +306,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             s2 = Car(Cdr(Cdr(expr)));
@@ -327,7 +327,7 @@ public interface StaticChecker extends ReservedName{
             try{
                 Preconditions.checkUndefinedBehavior(! Cdr(Cdr(Cdr(expr))).equals(nodeNIL), "Length != 3");
             }catch(UndefinedBehaviorException udbe){
-                throw new UndefinedBehaviorException("UndefinedBehavior - Formals list have different length with Actual list");
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - Formals list have different length with Actual list");
             }
             s1 = Car(Cdr(expr));
             s2 = Car(Cdr(Cdr(expr)));

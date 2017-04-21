@@ -17,10 +17,6 @@
 (COND ((EQ 5 5) (LESS (CAR (CONS 4 NIL)) 5)) (F (LESS 1 2)) )
 ()
 NIL
-<<<<<<< Updated upstream
-
-(COND (F 5) (F 6))
-=======
 (COND (F 5) (F 6))
 (COND (F NIL) (F (CONS 5 NIL)))
 T
@@ -47,4 +43,4 @@ NIL
 (COND (T (CONS 8 NIL)) (F NIL))
 (COND (F 2) (F 3) (T 4))
 (COND (F (CONS 2 NIL)) (F (CONS 2 (CONS 3 NIL))) (T NIL))
->>>>>>> Stashed changes
+(CONS 5 NIL)

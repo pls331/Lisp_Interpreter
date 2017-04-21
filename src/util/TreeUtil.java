@@ -92,7 +92,7 @@ public class TreeUtil {
             cur = cur.getRight();
             if(cur.getRight() != null) builder.append(" ");
         }
-        if(! cur.equals(nodeF)){
+        if(! cur.equals(nodeNIL)){
             builder.append(" . ");
             builder.append(cur.getLexicalVal());
         }

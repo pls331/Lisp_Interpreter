@@ -68,17 +68,17 @@ public class Parser implements StaticChecker{
 		for (TreeNode node : this.rootList){
 			try{
 				isExceptionCaught = false;
-				System.out.println(TreeUtil.getListNotation(node));
-				System.out.flush();
+//				System.out.println(TreeUtil.getListNotation(node));
+//				System.out.flush();
 				// static type checking
 				TypeSystem evalType = this.evalType(node);
 				// static empty list checking
 				Pair<TypeSystem, Integer> evalPair = this.evalEmptyList(node);
-				System.out.println(String.format("%s, %s", evalType, evalPair));
+//				System.out.println(String.format("%s, %s", evalType, evalPair));
 				assert evalType == evalPair.getFirst();
 				this.resultList.add(new Pair<>(evalType, evalPair.getSecond()));
-//				if(isPrint)
-//					System.out.println(TreeUtil.getListNotation(node));
+				if(isPrint)
+					System.out.println(TreeUtil.getListNotation(node));
 			}catch (InvalidTypeException ite){
 				if(!isTesting) System.out.println(String.format(ite.getMessage()));
 				exMsgList.add(ite.getMessage());
