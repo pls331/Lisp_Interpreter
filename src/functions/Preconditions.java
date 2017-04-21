@@ -12,14 +12,13 @@ public class Preconditions {
 
     public static void checkNotNull(Object node){
         if (node == null){
-            throw new NullPointerException("Precondition check");
+            throw new NullPointerException("TYPE ERROR: ");
         }
     }
 
-    public static void checkUndefinedBehavior(boolean expr, String msg)
-        throws UndefinedBehaviorException{
+    public static void checkUndefinedBehavior(boolean expr, String msg) {
         if(expr){
-                throw new UndefinedBehaviorException("UndefinedBehavior - " + msg);
+                throw new UndefinedBehaviorException("TYPE ERROR: UndefinedBehavior - " + msg);
             }
     }
 
@@ -33,7 +32,7 @@ public class Preconditions {
     public static void checkEmptyList(int minLen,int inferedLen, String msg)
             throws EmptyListException {
         if(!(inferedLen >= minLen)){
-            throw new EmptyListException(msg);
+            throw new EmptyListException("TYPE ERROR: " + msg);
         }
     }
 }

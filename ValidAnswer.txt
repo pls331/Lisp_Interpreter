@@ -17,4 +17,33 @@
 <Bool, 0>
 <List(Nat), 0>
 <List(Nat), 0>
+<<<<<<< Updated upstream
 <Nat, 0>
+=======
+<Nat, 0>
+<List(Nat), 0>
+<Bool, 0>
+<Bool, 0>
+<List(Nat), 0>
+<List(Nat), 1>
+<List(Nat), 1>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Bool, 0>
+<Nat, 0>
+<Nat, 0>
+<Nat, 0>
+<List(Nat), 0>
+<Nat, 0>
+<Nat, 0>
+<List(Nat), 0>
+<Nat, 0>
+<List(Nat), 0>
+>>>>>>> Stashed changes
