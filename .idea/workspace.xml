@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list id="dde84431-3663-4caf-a7f2-bbb8857fa77f" name="Default" comment="Learn about commit." />
     <list default="true" id="0ba1efbd-e81b-4448-8477-ccd2fe456566" name="idea_config" comment="Output format confirmed.&#10;&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvalidTestAnswer.txt" afterPath="$PROJECT_DIR$/InvalidTestAnswer.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvalidTestCase.txt" afterPath="$PROJECT_DIR$/InvalidTestCase.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidAnswer.txt" afterPath="$PROJECT_DIR$/ValidAnswer.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidTestCase.txt" afterPath="$PROJECT_DIR$/ValidTestCase.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/functions/StaticChecker.java" afterPath="$PROJECT_DIR$/src/functions/StaticChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TreeUtil.java" afterPath="$PROJECT_DIR$/src/util/TreeUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" afterPath="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" afterPath="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,18 +103,18 @@
       <file leaf-file-name="ValidTestCase.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+            <state relative-caret-position="540">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+            <state relative-caret-position="331">
+              <caret line="80" column="71" lean-forward="true" selection-start-line="80" selection-start-column="71" selection-end-line="80" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,11 +172,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TreeUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+            <state relative-caret-position="642">
+              <caret line="98" column="28" lean-forward="true" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeUtilTest.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -304,12 +305,12 @@
         <option value="$PROJECT_DIR$/src/functions/StaticChecker.java" />
         <option value="$PROJECT_DIR$/test/TypeCheckerTest.groovy" />
         <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
-        <option value="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/ValidTestCase.txt" />
         <option value="$PROJECT_DIR$/ValidAnswer.txt" />
         <option value="$PROJECT_DIR$/InvalidTestCase.txt" />
         <option value="$PROJECT_DIR$/InvalidTestAnswer.txt" />
+        <option value="$PROJECT_DIR$/test/util/TreeUtilTest.groovy" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
       </list>
     </option>
   </component>
@@ -572,7 +573,7 @@
       <recent name="Exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TypeCheckerTest.testInvalid">
+  <component name="RunManager" selected="JUnit.TypeCheckerTest.testValid">
     <configuration default="false" name="InterpreterTest.testValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Interpreter_pan692" />
@@ -923,10 +924,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TreeUtilTest.testPrettyPrint" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testValid" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TreeUtilTest.testPrettyPrint" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest.testInvalid" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InterpreterTest.testValid" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.TypeCheckerTest" />
       </list>
     </recent_temporary>
@@ -1022,34 +1023,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InterpreterTest_testValid - 2017.04.20 at 21h 04m 56s.xml">
-      <configuration name="InterpreterTest.testValid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 20h 59m 07s.xml">
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 16m 02s.xml">
       <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 00m 49s.xml">
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 19m 24s.xml">
       <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 01m 07s.xml">
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 19m 44s.xml">
       <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 02m 37s.xml">
+    <history-entry file="TreeUtilTest_testPrettyPrint - 2017.04.20 at 21h 20m 03s.xml">
       <configuration name="TreeUtilTest.testPrettyPrint" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TypeCheckerTest_testInvalid - 2017.04.20 at 21h 11m 03s.xml">
       <configuration name="TypeCheckerTest.testInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 05m 01s.xml">
-      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 06m 12s.xml">
-      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 08m 36s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 10m 55s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 12m 43s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 15m 48s.xml">
+      <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeCheckerTest_testValid - 2017.04.20 at 21h 20m 36s.xml">
       <configuration name="TypeCheckerTest.testValid" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1074,7 +1075,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5032113" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12706044" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36881867" sideWeight="0.49421966" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276099" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1432,14 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/TypeCheckerTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1350">
@@ -1452,22 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1496,13 +1473,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/TreeUtilTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+        <state relative-caret-position="331">
+          <caret line="80" column="71" lean-forward="true" selection-start-line="80" selection-start-column="71" selection-end-line="80" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidTestCase.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TreeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="98" column="28" lean-forward="true" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
